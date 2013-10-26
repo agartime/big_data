@@ -20,5 +20,5 @@ Lessons by day:
 Contact
 ------- 
 
-[Contact by Email](mailto:antoniogartime@gmail.com)
-[Contact by LinkedIn](es.linkedin.com/in/antoniogartime/en)
+[Contact by Email](mailto:antoniogartime@gmail.com)  
+[Contact by LinkedIn](http://es.linkedin.com/in/antoniogartime/en)  
