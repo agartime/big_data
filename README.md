@@ -13,7 +13,7 @@ Lessons by day:
 ---------------
 
 * Oct 26th, 2013:
- * [haddop.fs](./haddop.fs/src/com/agartime/utad/hdfs/BasicOps.java) Basic Operations in HDFS using Java API.
+ * [haddop.fs](./hadoop.fs/src/com/agartime/utad/hdfs/BasicOps.java) Basic Operations in HDFS using Java API.
  * [flume](./flume/001_flume_basic) Echo Sample.
 
 
