@@ -8,10 +8,10 @@ Sink prints to screen.
 Files:
 ------
 
-* flume.conf => Configuration file.  
-* flume_server.sh => Starts an agent listening in localhost:9999.  
-* flume.txt => Just a text file.  
-* flume_writer.sh => Sends the contents of flume.txt to localhost:9999.  
+* [flume.conf](./flume.conf) => Configuration file.  
+* [flume_server.sh](./flume_server.sh) => Starts an agent listening in localhost:9999.  
+* [flume.txt](./flume.txt) => Just a text file.  
+* [flume_writer.sh](./flume_writer.sh) => Sends the contents of flume.txt to localhost:9999.  
 
 Usage: 
 ------
