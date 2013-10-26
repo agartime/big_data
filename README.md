@@ -8,3 +8,14 @@ Technologies:
 
 - haddop.fs (from Hadoop Java API)
 - Flume
+
+Lessons by day:
+---------------
+
+* Oct 26th, 2013:
+ * [haddop.fs](./haddop.fs/agartime/utad/hdfs/BasicOps.java) Basic Operations in HDFS using Java API.
+ * [flume](./flume/001_flume_basic) Echo Sample.
+
+
+- 
+- 
