@@ -60,7 +60,7 @@ public class BasicOps {
 		FileStatus [] dir = fs.listStatus(new Path("/user/cloudera"));
 		
 		for (FileStatus fileStatus : dir) {
-			System.out.println(fileStatus.getPath() + " " + status.getOwner() + " " + status.getLen());
+			System.out.println(fileStatus.getPath() + " " + fileStatus.getOwner() + " " + fileStatus.getLen());
 		}
 		
 		System.out.println("We don't forget to close the fileSystem itself! Good bye!");
