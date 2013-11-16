@@ -24,7 +24,7 @@ Usage:
 
 You don't need HDFS to execute the program. You can easily test it by using:
 
-bigdata.hdfs.Compactador <glob-origin-files> <destiny-file> (debug)
+      bigdata.hdfs.Compactador <glob-origin-files> <destiny-file> (debug)
 
 where: 
 
@@ -33,6 +33,7 @@ where:
 * debug - After compression, the file is opened to review its contents in a human-readable format (printed on the screen).
 
 i.e:
+
       java -jar ./target/bigdata.hdfs-1.0-SNAPSHOT-jar-with-dependencies.jar "*xml" destination_file debug
 
 or:
