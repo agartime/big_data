@@ -10,6 +10,11 @@ Lessons by day:
  * [hadoop.fs](./hadoop.fs/src/com/agartime/utad/hdfs/BasicOps.java) Basic Operations in HDFS using Java API.
  * [flume](./flume/001_flume_basic) Echo Sample.
 
+Deliverables:
+-------------
+
+* HDFS Interaction
+  * [Compactador](./deliverables/compactador
 
 Contact
 ------- 
