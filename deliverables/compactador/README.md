@@ -28,9 +28,9 @@ You don't need HDFS to execute the program. You can easily test it by using:
 
 where: 
 
-* glob-origin-files - [GLOB](http://en.wikipedia.org/wiki/Glob_(programming) containing the FileSystem Path/s to the candidate files to be compressed.
+* glob-origin-files - [glob](http://en.wikipedia.org/wiki/Glob_(programming) containing the FileSystem Path/s to the candidate files to be compressed.
 * destiny-file - Destination file.
-* debug - After compression, the file is opened to review its contents in a human-readable format (printed on the screen).
+* debug (optional) - After compression, the file is opened to review its contents in a human-readable format (printed on the screen).
 
 i.e:
 
