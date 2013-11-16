@@ -14,7 +14,7 @@ Deliverables:
 -------------
 
 * HDFS Interaction
-  * [Compactador](./deliverables/compactador
+  * [Compactador](./deliverables/compactador)
 
 Contact
 ------- 
