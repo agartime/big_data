@@ -12,7 +12,7 @@
 
   <artifactId>hadoop-java-api-mapreduce-001-wordcount</artifactId>
   <packaging>jar</packaging>
-  <name>MapReduce Sample</name>
+  <name>WordCount MapReduce Sample</name>
   <description>WordCount MapReduce Sample</description>
 
   <properties>
