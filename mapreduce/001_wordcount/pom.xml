@@ -10,7 +10,7 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>hadoop-java-api-mapreduce-001-wordcount</artifactId>
+  <artifactId>agartime.wordcount</artifactId>
   <packaging>jar</packaging>
   <name>WordCount MapReduce Sample</name>
   <description>WordCount MapReduce Sample</description>
