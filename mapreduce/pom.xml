@@ -21,6 +21,7 @@
 
   <modules>
     <module>001_wordcount</module>
+    <module>002_writables</module>
   </modules>
 
   <build>
