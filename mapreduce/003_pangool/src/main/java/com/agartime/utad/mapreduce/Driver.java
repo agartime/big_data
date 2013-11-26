@@ -14,6 +14,11 @@ public class Driver extends ProgramDriver {
     public Driver() throws Throwable {
         super();
         addClass("temperature-changes", TopTemperatureChanges.class, "Calculates the top X temperature changes by city. Built with pangool");
+    }
 
+    public static void main(String[] args) throws Throwable {
+        Driver driver = new Driver();
+        driver.driver(args);
+        System.exit(0);
     }
 }
