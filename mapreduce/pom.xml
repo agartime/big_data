@@ -16,6 +16,7 @@
   <modules>
     <module>001_wordcount</module>
     <module>002_writables</module>
+    <module>003_pangool</module>
   </modules>
 
   <build>
