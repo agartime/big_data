@@ -35,7 +35,7 @@ public class TopTemperatureChanges extends Configured implements Tool {
         ArrayList<Field> fields = new ArrayList<Schema.Field>();
         fields.add(Schema.Field.create("location", Schema.Field.Type.STRING));
         fields.add(Schema.Field.create("day", Schema.Field.Type.INT));
-        fields.add(Schema.Field.create("change", Schema.Field.Type.FLOAT));
+        fields.add(Schema.Field.create("temperature_change", Schema.Field.Type.FLOAT));
         fields.add(Schema.Field.create("temperature_absolute_change", Schema.Field.Type.FLOAT));
         return new Schema("Changes", fields);
     }
@@ -86,7 +86,7 @@ public class TopTemperatureChanges extends Configured implements Tool {
 
             int count = 0;
             for (ITuple tuple : tuples) {
-                String out = tuple.get("location")+" "+tuple.get("day")+" "+tuple.get("change");
+                String out = tuple.get("location")+" "+tuple.get("day")+" "+tuple.get("temperature_change");
                 collector.write(new Text(out), NullWritable.get());
 
                 if (topValue == ++count) {
