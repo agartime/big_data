@@ -13,6 +13,7 @@ Lessons by day:
 * Nov 23rd, 2013:
  * [wordcount](./mapreduce/001_wordcount/)
  * [writables - hottest day of the year](./mapreduce/002_writables/)
+ * [pangool - temperature changes](./mapreduce/003_pangool/)
 
 Deliverables:
 -------------
