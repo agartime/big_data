@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.agartime.utad</groupId>
+    <groupId>com.agartime.utad.mapreduce</groupId>
     <artifactId>hadoop-java-api-top-level</artifactId>
     <version>0.1</version>
-    <relativePath>../pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath> 
   </parent>
 
-  <artifactId>agartime.writables</artifactId>
+  <artifactId>com.agartime.utad.mapreduce.writables</artifactId>
   <packaging>jar</packaging>
   <name>Writable Sample. Hottest Days of Year</name>
   <description>Writable Sample Hottest Days of Year in Spain</description>
