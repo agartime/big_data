@@ -7,7 +7,7 @@
     <groupId>com.agartime.utad.mapreduce</groupId>
     <artifactId>hadoop-java-api-top-level</artifactId>
     <version>0.1</version>
-    <relativePath></relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>com.agartime.utad.mapreduce.pangool</artifactId>
