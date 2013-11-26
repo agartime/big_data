@@ -10,7 +10,7 @@
     <relativePath></relativePath>
   </parent>
 
-  <artifactId>agartime.pangool</artifactId>
+  <artifactId>com.agartime.utad.mapreduce.pangool</artifactId>
   <packaging>jar</packaging>
   <name>Pangool Sample. Temperature Changes</name>
   <description>Temperature Changes by City Sample using Pangool</description>
