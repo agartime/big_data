@@ -97,7 +97,7 @@ public class TemperatureChanges extends Configured implements Tool {
 
                 if ( (currentDay - 1) == lastDay) {
                     String out = tuple.get("location") + " " + currentDay + " " + (currentTemp - lastTemp);
-                    collector.write(new Temperature((String)tuple.get("location"),currentDay,currentTemp), NullWritable.get());
+                    collector.write(new Temperature(tuple.get("location").toString(),currentDay,currentTemp), NullWritable.get());
                 }
 
                 lastDay = currentDay;
