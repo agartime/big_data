@@ -14,6 +14,7 @@ Lessons by day:
  * [wordcount](./mapreduce/001_wordcount/)
  * [writables - hottest day of the year](./mapreduce/002_writables/)
  * [pangool - temperature changes](./mapreduce/003_pangool/)
+ * [thrift - thrift usage sample](./mapreduce/004_thrift/)
 
 Deliverables:
 -------------
