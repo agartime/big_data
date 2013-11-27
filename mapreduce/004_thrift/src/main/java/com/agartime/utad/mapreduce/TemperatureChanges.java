@@ -4,14 +4,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.datasalt.pangool.serialization.ThriftSerialization;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
@@ -78,7 +80,7 @@ public class TemperatureChanges extends Configured implements Tool {
     }
 
     @SuppressWarnings("serial")
-    public static class DifferencesReducer extends TupleReducer<Text, NullWritable> {
+    public static class DifferencesReducer extends TupleReducer<Temperature, NullWritable> {
 
         public void reduce(ITuple group, Iterable<ITuple> tuples, TupleMRContext context,
                            Collector collector) throws IOException, InterruptedException, TupleMRException {
@@ -95,7 +97,7 @@ public class TemperatureChanges extends Configured implements Tool {
 
                 if ( (currentDay - 1) == lastDay) {
                     String out = tuple.get("location") + " " + currentDay + " " + (currentTemp - lastTemp);
-                    collector.write(new Text(out), NullWritable.get());
+                    collector.write(new Temperature((String)tuple.get("location"),currentDay,currentTemp), NullWritable.get());
                 }
 
                 lastDay = currentDay;
@@ -124,8 +126,12 @@ public class TemperatureChanges extends Configured implements Tool {
         mr.setOrderBy(new OrderBy().add("location", Order.ASC).add("day", Order.ASC));
         mr.setTupleReducer(new DifferencesReducer());
         mr.addInput(new Path(input), new HadoopInputFormat(TextInputFormat.class), new ParseMap());
-        mr.setOutput(new Path(output), new HadoopOutputFormat(TextOutputFormat.class), Text.class, NullWritable.class);
-        mr.createJob().waitForCompletion(true);
+        mr.setOutput(new Path(output), new HadoopOutputFormat(SequenceFileOutputFormat.class), Temperature.class, NullWritable.class);
+        Job job = mr.createJob();
+
+        //Enable Thrift Serialization
+        ThriftSerialization.enableThriftSerialization(job.getConfiguration());
+        job.waitForCompletion(true);
 
         return 0;
     }
