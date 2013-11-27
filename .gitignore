@@ -3,5 +3,7 @@
 *.iml
 *.ipr
 *.iws
+*.DSStore
+*.DS_Store
 .settings/
 target/

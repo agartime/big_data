@@ -72,7 +72,12 @@
         <version>0.60.6</version>
         <classifier>mr2</classifier>
     </dependency>
-    
+   
+    <dependency>
+        <groupId>org.apache.thrift</groupId>
+        <artifactId>libthrift</artifactId>
+        <version>0.9.1</version>
+    </dependency> 
     <!-- Test dependencies -->
     <dependency>
       <groupId>junit</groupId>
