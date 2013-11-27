@@ -1,4 +1,4 @@
-package hadoopcourse.pangool;
+package com.agartime.utad.mapreduce;
 
 import java.io.IOException;
 import java.util.ArrayList;
