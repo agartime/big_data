@@ -14,6 +14,7 @@ public class Driver extends ProgramDriver {
     public Driver() throws Throwable {
         super();
         addClass("temperature-changes", TopTemperatureChanges.class, "Calculates the top X temperature changes by city. Built with pangool");
+        addClass("flow", TemperatureChangesFlow.class, "Executes both jobs in a flow");
     }
 
     public static void main(String[] args) throws Throwable {
