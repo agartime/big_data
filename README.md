@@ -17,9 +17,7 @@ Lessons by day:
  * [thrift - thrift usage sample](./mapreduce/004_thrift/)
 
 * Nov 29th, 2013:
- * [patterns](./mapreduce/005_patterns/)
-   * Inverted Index
-   * Secondary Sort
+ * [patterns](./mapreduce/005_patterns/) - Including Inverted Index, Secondary Sort, etc.
 
 Deliverables:
 -------------
