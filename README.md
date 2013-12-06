@@ -18,8 +18,8 @@ Lessons by day:
 
 * Nov 29th, 2013:
  * [patterns](./mapreduce/005_patterns/)
-  * Inverted Index
-  * Secondary Sort
+   * Inverted Index
+   * Secondary Sort
 
 Deliverables:
 -------------
