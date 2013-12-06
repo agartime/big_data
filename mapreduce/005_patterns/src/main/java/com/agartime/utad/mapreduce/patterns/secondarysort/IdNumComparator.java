@@ -1,4 +1,4 @@
-package com.agartime.utad.mapreduce.patterns;
+package com.agartime.utad.mapreduce.patterns.secondarysort;
 
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;

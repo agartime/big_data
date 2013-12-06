@@ -1,4 +1,4 @@
-package com.agartime.utad.mapreduce.patterns;
+package com.agartime.utad.mapreduce.patterns.secondarysort;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -7,14 +7,14 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class Driver {
+public class SecondarySortDriver {
 	public static void main(String[] args) throws Exception {
 		if (args.length != 2) {
-			System.out.printf("Usage: SolSecondarySortDriver <input dir> <output dir>\n");
+			System.out.printf("Usage: SecondarySort <input dir> <output dir>\n");
 			System.exit(-1);
 		}
 		Job job = Job.getInstance();
-		job.setJarByClass(Driver.class);
+		job.setJarByClass(SecondarySortDriver.class);
 		job.setJobName("Secondary Sort");
 	
 		FileInputFormat.setInputPaths(job, new Path(args[0]));

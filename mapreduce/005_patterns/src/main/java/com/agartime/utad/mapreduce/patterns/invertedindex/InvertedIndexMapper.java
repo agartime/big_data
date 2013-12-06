@@ -1,4 +1,4 @@
-package com.agartime.utad.mapreduce.patterns;
+package com.agartime.utad.mapreduce.patterns.invertedindex;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.input.KeyValueTextInputFormat;
 
-public class IndiceInvertidoMapper extends Mapper<LongWritable, Text, Text, Text> {
+public class InvertedIndexMapper extends Mapper<LongWritable, Text, Text, Text> {
 
 	// TODO write initialization method
 

@@ -42,7 +42,7 @@
 		</descriptors>
 		<archive>
 		  <manifest>
-		    <mainClass>com.agartime.utad.mapreduce.Driver</mainClass>
+		    <mainClass>com.agartime.utad.mapreduce.patterns.Driver</mainClass>
 	          </manifest>
 		</archive>
 	    </configuration>
@@ -65,7 +65,12 @@
     	<groupId>org.apache.hadoop</groupId>
     	<artifactId>hadoop-client</artifactId>
     	<version>2.0.0-mr1-cdh4.4.0</version>
-  	</dependency>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-core</artifactId>
+	<version>2.0.0-mr1-cdh4.4.0</version>
+    </dependency>
     
     <!-- Test dependencies -->
     <dependency>
@@ -75,13 +80,6 @@
       <scope>test</scope>
     </dependency>
     
-    <dependency>
-      <groupId>org.apache.mrunit</groupId>
-      <artifactId>mrunit</artifactId>
-      <version>1.0.0</version>
-      <classifier>hadoop2</classifier>
-      <scope>test</scope>
-    </dependency>            
  </dependencies>
  
  <repositories>
