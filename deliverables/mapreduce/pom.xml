@@ -35,7 +35,7 @@
                     </descriptors>
                     <archive>
                         <manifest>
-                            <mainClass>com.agartime.utad.histogram.Driver</mainClass>
+                            <mainClass>com.agartime.utad.Driver</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

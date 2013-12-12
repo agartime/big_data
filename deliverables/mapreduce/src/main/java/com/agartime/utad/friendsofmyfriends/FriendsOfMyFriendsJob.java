@@ -21,7 +21,7 @@ public class FriendsOfMyFriendsJob extends Configured implements Tool {
     public int run(String[] args) throws Exception {
         if(args.length != 2) {
             System.out.println("Invalid number of arguments\n\n" +
-                    "Usage: FriendsOfMyFriends <input_path> <output_path>\n\n");
+                    "Usage: friends <input_path> <output_path>\n\n");
             return -1;
         }
 
