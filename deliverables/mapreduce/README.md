@@ -21,6 +21,24 @@ After a successful build, you will find a .jar file into the target directory (o
 
       ./target/mapreduce*.jar
 
+You can execute the exercises in Hadoop, typing:
+
+       hadoop jar ./target/mapreduce-1.0-SNAPSHOT.jar com.agartime.utad.Driver
+
+Histogram: 
+ 
+       hadoop jar ./target/mapreduce-1.0-SNAPSHOT.jar com.agartime.utad.Driver friends input_file output_file n_bars
+
+   Example:
+       hdfs dfs -put ./src/main/resources/histogram_input_sample.txt                               
+       hadoop jar ./target/mapreduce-1.0-SNAPSHOT.jar com.agartime.utad.Driver histogram histogram_input_sample.txt histogram.out 30
+
+
+Friends Of My Friends:
+
+   Example:
+       hdfs dfs -put ./src/main/resources/mutualfriends_input_sample.txt 
+       hadoop jar ./target/mapreduce-1.0-SNAPSHOT.jar com.agartime.utad.Driver friends mutualfriends_input_sample.txt friends.out
 
 You may create an Eclipse Project executing:
 
