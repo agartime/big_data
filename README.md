@@ -24,6 +24,8 @@ Deliverables:
 
 * HDFS Interaction
   * [Compactador](./deliverables/compactador)
+* Map Reduce Exercises - Histogram and FriendsOfMyFriends
+  * [MapReduce](./deliverables/mapreduce)
 
 Contact
 ------- 
