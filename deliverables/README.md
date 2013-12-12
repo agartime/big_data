@@ -6,3 +6,5 @@ This is a set of deliverable exercises.
 * HDFS Interaction
   * [Compactador](./compactador)
 
+* MapReduce
+ * [MapReduce](./mapreduce) - Contains Histogram and Friends Of My Friends Problem
