@@ -29,17 +29,29 @@ Histogram:
 ---------- 
 
    Classes:
+
         * HistogramFlow - Flow
+
         * HistogramMinMaxJob - First Job
+
         * HistogramDistributorJob - Second Job
+
         * RangeWritable - Writable for a Range of two numbers.
+
         * CkIdRange - Composed Key for an Id and a Range <id,RangeWritable>.
+
         * NumToRangeMapper - First job mapper for min/max calculation. 
+
         * MinMaxRangeReducer - First job combiner/reducer for min/max calculation. Writables are received in order. There we get first and last value.
+
 	* BarDistributorMapper - Second job mapper. Calculates the bar for a specific number.
+
         * BarSummatorReducer - Second job reducer. Emits every bar and its sum.
+
         * IdRangeComparator - Sort Comparator for Range in a composed key.
+
         * GroupIdComparator - Grouping comparator.
+
         * IdPartitioner - Partitioner.
 
    Usage: 
@@ -56,9 +68,13 @@ Friends Of My Friends:
 ----------------------
    
    Classes:
+
        * FriendsOfMyFriendsJob - Job
+
        * DirectionalRelationshipWritable - Writable for storing directional relationships.
+
        * FriendAndReversalMapper - Mapper for emit a friendship and its reversal.
+
        * MutualRelationshipFinderReducer - Retrieve friends of my friends.
 
    Usage:
