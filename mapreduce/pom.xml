@@ -18,6 +18,7 @@
     <module>002_writables</module>
     <module>003_pangool</module>
     <module>004_thrift</module>
+    <module>005_patterns</module>
   </modules>
 
   <build>

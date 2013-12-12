@@ -6,4 +6,7 @@
 *.DSStore
 *.DS_Store
 .settings/
+.idea
+.idea/*.*
+.idea/libraries/*.xml
 target/
