@@ -26,7 +26,7 @@ You can execute the exercises in Hadoop, typing:
        hadoop jar ./target/mapreduce-1.0-SNAPSHOT.jar com.agartime.utad.Driver
 
 Histogram: 
- 
+---------- 
        hadoop jar ./target/mapreduce-1.0-SNAPSHOT.jar com.agartime.utad.Driver friends input_file output_file n_bars
 
    Example:
@@ -36,7 +36,7 @@ Histogram:
 
 
 Friends Of My Friends:
-
+----------------------
        hadoop jar ./target/mapreduce-1.0-SNAPSHOT.jar com.agartime.utad.Driver friends input_file output_file
 
    Example:
