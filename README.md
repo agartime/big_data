@@ -19,6 +19,9 @@ Lessons by day:
 * Nov 29th, 2013:
  * [patterns](./mapreduce/005_patterns/) - Including Inverted Index, Secondary Sort, etc.
 
+* Dec 14th, 2013:
+ * [hive](./hive) - Hive Samples. Regex Serde table creation, CTAS, etc.
+
 Deliverables:
 -------------
 
