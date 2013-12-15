@@ -1,8 +1,7 @@
-Hive 
-====
+Twitter 
+=======
 
-Hive Examples:
+Flume + Twitter + Hive. Analyzing tweets.
 
-* some_queries.hql - Some Query Samples from the exercises
-* create_table.hql - Create Table using Regex Serdes
-* ctas.hql - Create Table As Select
+* flume.conf - Flume + Twitter config. Insert tokens in <required> fields. Put some keywords.
+
