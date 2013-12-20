@@ -23,6 +23,9 @@ Lessons by day:
  * [hive](./hive) - Hive Samples. Regex Serde table creation, CTAS, etc.
  * [twitter](./hive/twitter) - Flume + Twitter + Hive. Analyzing tweets.
 
+* Dec 20th, 2013:
+ * [pig](./pig) - Pig Samples.
+
 Deliverables:
 -------------
 
