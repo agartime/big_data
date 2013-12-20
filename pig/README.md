@@ -1,8 +1,6 @@
 PIG
 ===
 
-Usage:
-
-Local: pig -x local -f test-input.pig
-Hadoop: pig -f test-input.pig
+* [sample_1](./sample_1)
+* [sample_2](./sample_2)
 
