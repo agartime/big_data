@@ -33,6 +33,8 @@ Deliverables:
   * [Compactador](./deliverables/compactador)
 * Map Reduce Exercises - Histogram and FriendsOfMyFriends
   * [MapReduce](./deliverables/mapreduce)
+* Design Patterns Exercises - Syslog Analyzer, Salaries Range using In Mapper Combining and Map Only.
+  * [DesignPatterns](./deliverables/designpatterns)
 
 Contact
 ------- 
