@@ -1,7 +1,7 @@
-U-Tad Big Data Master's Degree Lessons Learned
+U-Tad Big Data Master's Degree Lessons Learnt
 ==============================================
 
-This is a set of practice lessons learned during the first U-Tad Master's Degree in Big Data (Oct 2013 - May 2014).
+This is a set of practice lessons learnt during the first U-Tad Master's Degree in Big Data (Oct 2013 - May 2014).
 
 Lessons by day:
 ---------------
@@ -23,6 +23,9 @@ Lessons by day:
  * [hive](./hive) - Hive Samples. Regex Serde table creation, CTAS, etc.
  * [twitter](./hive/twitter) - Flume + Twitter + Hive. Analyzing tweets.
 
+* Dec 20th, 2013:
+ * [pig](./pig) - Pig Samples.
+
 Deliverables:
 -------------
 
@@ -30,6 +33,8 @@ Deliverables:
   * [Compactador](./deliverables/compactador)
 * Map Reduce Exercises - Histogram and FriendsOfMyFriends
   * [MapReduce](./deliverables/mapreduce)
+* Design Patterns Exercises - Syslog Analyzer, Salaries Range using In Mapper Combining and Map Only.
+  * [DesignPatterns](./deliverables/designpatterns)
 
 Contact
 ------- 
