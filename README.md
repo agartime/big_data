@@ -26,6 +26,9 @@ Lessons by day:
 * Dec 20th, 2013:
  * [pig](./pig) - Pig Samples.
 
+* Jan 11th, 2014:
+ * [hadoop_streaming](./hadoop_streaming) - Hadoop Streaming Samples using Awk and Ruby.
+
 Deliverables:
 -------------
 
