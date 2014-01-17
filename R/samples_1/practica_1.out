@@ -1,0 +1,1158 @@
+Script started on Fri Jan 17 16:38:46 2014
+[?1034hbash-3.2$ R
+
+R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+R es un software libre y viene sin GARANTIA ALGUNA.
+Usted puede redistribuirlo bajo ciertas circunstancias.
+Escriba 'license()' o 'licence()' para detalles de distribucion.
+
+R es un proyecto colaborativo con muchos contribuyentes.
+Escriba 'contributors()' para obtener más información y
+'citation()' para saber cómo citar R o paquetes de R en publicaciones.
+
+Escriba 'demo()' para demostraciones, 'help()' para el sistema on-line de ayuda,
+o 'help.start()' para abrir el sistema de ayuda HTML con su navegador.
+Escriba 'q()' para salir de R.
+
+[?1034h> 3 * (11.5 + 2.3)
+[1] 41.4
+> g <- 48[K931
+> stem(murder)
+[1mError en stem(murder) : objeto 'murder' no encontrado
+[0m> muerd[K[K[Krder
+[1mError: objeto 'murder' no encontrado
+[0m> 
+> ls
+function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+    pattern) 
+{
+    if (!missing(name)) {
+        nameValue <- try(name, silent = TRUE)
+        if (identical(class(nameValue), "try-error")) {
+            name <- substitute(name)
+            if (!is.character(name)) 
+                name <- deparse(name)
+            warning(gettextf("%s converted to character string", 
+                sQuote(name)), domain = NA)
+            pos <- name
+        }
+        else pos <- nameValue
+    }
+    all.names <- .Internal(ls(envir, all.names))
+    if (!missing(pattern)) {
+        if ((ll <- length(grep("[", pattern, fixed = TRUE))) && 
+            ll != length(grep("]", pattern, fixed = TRUE))) {
+            if (pattern == "[") {
+                pattern <- "\\["
+                warning("replaced regular expression pattern '[' by  '\\\\['")
+            }
+            else if (length(grep("[^\\\\]\\[<-", pattern))) {
+                pattern <- sub("\\[<-", "\\\\\\[<-", pattern)
+                warning("replaced '[<-' by '\\\\[<-' in regular expression pattern")
+            }
+        }
+        grep(pattern, all.names, value = TRUE)
+    }
+    else all.names
+}
+<bytecode: 0x10205aea8>
+<environment: namespace:base>
+> ls()
+[1] "g"
+> murder <_ 15.1, 11.3, 7.8, 10.3)[C[C[K[1P[1@-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)
+[1mError: inesperado ',' in "murder <- (15.1,"
+[0m> murder <- (15.1, 11.3, 7.8, 10.3)[1@c
+> stem/mur[K[K[K[K(murder)
+
+  The decimal point is at the |
+
+   6 | 8
+   8 | 
+  10 | 33
+  12 | 
+  14 | 1
+
+> # test
+> # Read from file with scan
+> illit <_ scan("metari[K[K[K[K[Katerial_clase/illy[Kt[Kitdata.txt")
+[1mError: inesperado entrada in "illit <_"
+[0m> illit <_ scan("material_clase/illitdata.txt")[1P scan("material_clase/illitdata.txt")[C[C[C[C[C[C[C[C[C- scan("material_clase/illitdata.txt")[C[C[C[C[C[C[C[C[C[C
+[1mRead 10 items
+[0m> illit
+ [1] 2.1 1.5 1.8 1.9 1.1 0.7 1.1 0.9 1.3 2.0
+> 
+> state[K[K[K[K[Kstates[K[K[K[K[K[K# Read States
+> states <- scanf([K[K("material_clase/statecodes.txt", character())
+[1mRead 10 items
+[0m> states
+ [1] "AL" "AK" "AZ" "AR" "CA" "CO" "CT" "DE" "FL" "GA"
+> 
+> murder
+[1] 15.1 11.3  7.8 10.3
+> murder/illit
+ [1]  7.190476  7.533333  4.333333  5.421053 13.727273 16.142857  7.090909
+ [8] 11.444444 11.615385  5.650000
+[1mMensajes de aviso perdidos
+[0m[1mIn murder/illit :
+  longitud de objeto mayor no es múltiplo de la longitud de uno menor
+[0m> 
+> # Los objetos deberian ser de [Kl mismo tamaño[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kerian ser del mismo tamaño
+> murder <- c(15.1 [K, 11.3, 7.8, 10.1, 10.3, 6.8, 3.1, 6.2, 10.7, 13.9
++ )
+> murder
+ [1] 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9
+> mud[Krder/illit
+ [1] 7.190476 7.533333 4.333333 5.315789 9.363636 9.714286 2.818182 6.888889
+ [9] 8.230769 6.950000
+> 
+> # El c[K[K[K[K[K[KCon[K[K[K# Con esto le decimos que ponga muer[K[Krder 10 veces en el objeto kk
+> kk<[K <- rep(murder, 10)
+> kk
+  [1] 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9 15.1 11.3  7.8 10.1 10.3
+ [16]  6.8  3.1  6.2 10.7 13.9 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9
+ [31] 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9 15.1 11.3  7.8 10.1 10.3
+ [46]  6.8  3.1  6.2 10.7 13.9 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9
+ [61] 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9 15.1 11.3  7.8 10.1 10.3
+ [76]  6.8  3.1  6.2 10.7 13.9 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9
+ [91] 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9
+> 
+> # EL numero entre corchetes indica el indeic[K[K[Kice po[K[Kpor el que va representando la linea
+> 
+> #Tomar 2 y elevant[K[Krlo a una[K[K[Kla quinta potencia, la octava potencia, o al v[Kcubo
+> 2^c(5,8,3)
+[1]  32 256   8
+> 
+> # SECUENCIAS : Ej 0:10, e[KSecuencia de 0 1 [K[Ka 10 en incremente[Kos de 1
+> 0:10
+ [1]  0  1  2  3  4  5  6  7  8  9 10
+> 
+> # Podemos [K[K[K[K[K[K[K[KSe da cuenta en otro tipo de secuencias de cómo tiene que itr[Kerar
+> 3:-1[K7
+ [1]  3  2  1  0 -1 -2 -3 -4 -5 -6 -7
+> 
+> # Solo funciona con nun[K[K[Kunidades.,[K Para indicarle incrementos, utilizamos seq (inicio, fin, incremento)
+> se[K[Kr1 <- seq(1, 1000, by=2)
+> r1
+  [1]   1   3   5   7   9  11  13  15  17  19  21  23  25  27  29  31  33  35
+ [19]  37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71
+ [37]  73  75  77  79  81  83  85  87  89  91  93  95  97  99 101 103 105 107
+ [55] 109 111 113 115 117 119 121 123 125 127 129 131 133 135 137 139 141 143
+ [73] 145 147 149 151 153 155 157 159 161 163 165 167 169 171 173 175 177 179
+ [91] 181 183 185 187 189 191 193 195 197 199 201 203 205 207 209 211 213 215
+[109] 217 219 221 223 225 227 229 231 233 235 237 239 241 243 245 247 249 251
+[127] 253 255 257 259 261 263 265 267 269 271 273 275 277 279 281 283 285 287
+[145] 289 291 293 295 297 299 301 303 305 307 309 311 313 315 317 319 321 323
+[163] 325 327 329 331 333 335 337 339 341 343 345 347 349 351 353 355 357 359
+[181] 361 363 365 367 369 371 373 375 377 379 381 383 385 387 389 391 393 395
+[199] 397 399 401 403 405 407 409 411 413 415 417 419 421 423 425 427 429 431
+[217] 433 435 437 439 441 443 445 447 449 451 453 455 457 459 461 463 465 467
+[235] 469 471 473 475 477 479 481 483 485 487 489 491 493 495 497 499 501 503
+[253] 505 507 509 511 513 515 517 519 521 523 525 527 529 531 533 535 537 539
+[271] 541 543 545 547 549 551 553 555 557 559 561 563 565 567 569 571 573 575
+[289] 577 579 581 583 585 587 589 591 593 595 597 599 601 603 605 607 609 611
+[307] 613 615 617 619 621 623 625 627 629 631 633 635 637 639 641 643 645 647
+[325] 649 651 653 655 657 659 661 663 665 667 669 671 673 675 677 679 681 683
+[343] 685 687 689 691 693 695 697 699 701 703 705 707 709 711 713 715 717 719
+[361] 721 723 725 727 729 731 733 735 737 739 741 743 745 747 749 751 753 755
+[379] 757 759 761 763 765 767 769 771 773 775 777 779 781 783 785 787 789 791
+[397] 793 795 797 799 801 803 805 807 809 811 813 815 817 819 821 823 825 827
+[415] 829 831 833 835 837 839 841 843 845 847 849 851 853 855 857 859 861 863
+[433] 865 867 869 871 873 875 877 879 881 883 885 887 889 891 893 895 897 899
+[451] 901 903 905 907 909 911 913 915 917 919 921 923 925 927 929 931 933 935
+[469] 937 939 941 943 945 947 949 951 953 955 957 959 961 963 965 967 969 971
+[487] 973 975 977 979 981 983 985 987 989 991 993 995 997 999
+> 
+> # INDEXADO
+> # Nota. sqldf es un paquete de R que permite utilizar SQL y ejecutarla sobre un tipo de objecto de R.
+> 
+> r2 <- rep(2,5)
+> r2
+[1] 2 2 2 2 2
+> murder > 12
+ [1]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE
+> 
+> # Como vemos , aplica el valor [K[K[K[K[K[K[K[K[Kla condicion a cada elemento de murder y nos retorno cada vl[Kalor
+> # Esto es muy útil pra [K[K[Kara indexar. Si au[K un objeto de un vector, le indexamos un valor logico, no sdevolverá los true.
+> # summary nos hace un resumen
+> 
+> summary(murder > 12)
+   Mode   FALSE    TRUE    NA's 
+logical       8       2       0 
+> 
+> #Nos id[Kndicaria que 8 de los elementos no cumplen la condicion
+> 
+> #Si aplicamos summary sobre el vector directamente, nos da otro tipo de informacion
+> summary(murder)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   3.10    7.05   10.20    9.53   11.15   15.10 
+> 
+> 
+> #Ahora, con los corchetes, podemos indexarlo. Rag[Kngo del 1 al 13. E[KNos devolveria los valores de uno[K[K[K1 a 31[K[K13 del vector murder. como solo tenia 10 valores...
+> # n[K[Knos devuelve NAs
+> 
+> murder[1:13]
+ [1] 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9   NA   NA   NA
+> 
+> # Podemos indexar por una secuencia de valores logicos. Valores de murder en los que su valor es mayor que 12.
+> murder[murder > 12]
+[1] 15.1 13.9
+>  # Quer [K[K serían los dos únicos TRUEs que vimos antes
+> 
+> # El indice puede actuar para otro objeto, no para el mismo. Ej: Estados en los que murder es  [K> 12.
+> states[muer[K[Krder > 12]
+[1] "AL" "GA"
+> 
+> # Podemos tambien hacer consultas de otro tipo. Tasa de analfabetismo en los estados == "CA"
+> oññ[K[K[Killit[states == "CA"]
+[1] 1.1
+> 
+> # Indicaria tasa de analfabetismo = 1.1
+> 
+> #Una condición más complicada. An[Ksesinatos > 12 y tasa de analfabetismo <= 2.
+> cond <- (murder > 12) & o[K(illit [K<[K <2[K=2)
+> cond
+ [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE
+> murder[cond]
+[1] 13.9
+> 
+> #Un ejemplo de OR.
+> cond <- (murder > 12) | ([K(illit <= 2)
+> murder [K[cond]
+ [1] 15.1 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9
+> 
+> #Otra forma cui[Kriosa de indexar. Seleccionra t[K[K[K[Kar todas excepto la posicion 1. OJO
+> murder[-1]
+[1] 11.3  7.8 10.1 10.3  6.8  3.1  6.2 10.7 13.9
+> 
+> #O todas, meos la[K[K[K[K[Knos la 1 y la 7
+> murder[c[K-c(1,7)]
+[1] 11.3  7.8 10.1 10.3  6.8  6.2 10.7 13.9
+> 
+> #Guardar en un objeto (which_m12); Indices donde los asesinatos son mayores d[Kque 12.
+> which_m12 <- [1:10)[K[K[K[K[K[K(1:10)murde[K[K[K[K[K[murder [K> [K12]
+> which_m12
+[1]  1 10
+> 
+> # Y si no fuesen 10?
+> # Rango de 1 hasta la longitud de murder
+> which_m12 <- (1:length(murder))[murder>12]
+> whih_[K[Kch_m12
+[1]  1 10
+> 
+> @[K#L [Ka funcion hac[K[K[Kdev[K[K[Kwhich devuelve directamente los indices donde la condicion se cumple. Evitamos el tema del rango y demás.
+> s
+[1mError: objeto 's' no encontrado
+[0m> 
+> which_m12 <- which(murder > 12)
+> which_m12
+[1]  1 10
+> 
+> #Asi por[Kdemos indexar ta[K[Ktambien. n[Ken lugar de utilizar un vector logico, utilizamos un conjunto de numeros que son los indices.
+> 
+> 
+> murder[which_1m[K[Km1[K12]
+[1] 15.1 13.9
+> 
+> 
+> #o[KLo habitual es tener los datos de forma tabular. Por ejemplo, matrices. Todas [K[K[Kos los valores deben ser el mismo tipo de dato (ej enteros).
+> #Si son de tipos distintos, utilizariamos los dataframes, que son una estructura muy tipica en R.
+> 
+> #R trae algunos datasets de ejemplo
+> @[K#Por ejemplo, state.x77
+> 
+> state.x1[K77
+               Population Income Illiteracy Life Exp Murder HS Grad Frost
+Alabama              3615   3624        2.1    69.05   15.1    41.3    20
+Alaska                365   6315        1.5    69.31   11.3    66.7   152
+Arizona              2212   4530        1.8    70.55    7.8    58.1    15
+Arkansas             2110   3378        1.9    70.66   10.1    39.9    65
+California          21198   5114        1.1    71.71   10.3    62.6    20
+Colorado             2541   4884        0.7    72.06    6.8    63.9   166
+Connecticut          3100   5348        1.1    72.48    3.1    56.0   139
+Delaware              579   4809        0.9    70.06    6.2    54.6   103
+Florida              8277   4815        1.3    70.66   10.7    52.6    11
+Georgia              4931   4091        2.0    68.54   13.9    40.6    60
+Hawaii                868   4963        1.9    73.60    6.2    61.9     0
+Idaho                 813   4119        0.6    71.87    5.3    59.5   126
+Illinois            11197   5107        0.9    70.14   10.3    52.6   127
+Indiana              5313   4458        0.7    70.88    7.1    52.9   122
+Iowa                 2861   4628        0.5    72.56    2.3    59.0   140
+Kansas               2280   4669        0.6    72.58    4.5    59.9   114
+Kentucky             3387   3712        1.6    70.10   10.6    38.5    95
+Louisiana            3806   3545        2.8    68.76   13.2    42.2    12
+Maine                1058   3694        0.7    70.39    2.7    54.7   161
+Maryland             4122   5299        0.9    70.22    8.5    52.3   101
+Massachusetts        5814   4755        1.1    71.83    3.3    58.5   103
+Michigan             9111   4751        0.9    70.63   11.1    52.8   125
+Minnesota            3921   4675        0.6    72.96    2.3    57.6   160
+Mississippi          2341   3098        2.4    68.09   12.5    41.0    50
+Missouri             4767   4254        0.8    70.69    9.3    48.8   108
+Montana               746   4347        0.6    70.56    5.0    59.2   155
+Nebraska             1544   4508        0.6    72.60    2.9    59.3   139
+Nevada                590   5149        0.5    69.03   11.5    65.2   188
+New Hampshire         812   4281        0.7    71.23    3.3    57.6   174
+New Jersey           7333   5237        1.1    70.93    5.2    52.5   115
+New Mexico           1144   3601        2.2    70.32    9.7    55.2   120
+New York            18076   4903        1.4    70.55   10.9    52.7    82
+North Carolina       5441   3875        1.8    69.21   11.1    38.5    80
+North Dakota          637   5087        0.8    72.78    1.4    50.3   186
+Ohio                10735   4561        0.8    70.82    7.4    53.2   124
+Oklahoma             2715   3983        1.1    71.42    6.4    51.6    82
+Oregon               2284   4660        0.6    72.13    4.2    60.0    44
+Pennsylvania        11860   4449        1.0    70.43    6.1    50.2   126
+Rhode Island          931   4558        1.3    71.90    2.4    46.4   127
+South Carolina       2816   3635        2.3    67.96   11.6    37.8    65
+South Dakota          681   4167        0.5    72.08    1.7    53.3   172
+Tennessee            4173   3821        1.7    70.11   11.0    41.8    70
+Texas               12237   4188        2.2    70.90   12.2    47.4    35
+Utah                 1203   4022        0.6    72.90    4.5    67.3   137
+Vermont               472   3907        0.6    71.64    5.5    57.1   168
+Virginia             4981   4701        1.4    70.08    9.5    47.8    85
+Washington           3559   4864        0.6    71.72    4.3    63.5    32
+West Virginia        1799   3617        1.4    69.48    6.7    41.6   100
+Wisconsin            4589   4468        0.7    72.48    3.0    54.5   149
+Wyoming               376   4566        0.6    70.29    6.9    62.9   173
+                 Area
+Alabama         50708
+Alaska         566432
+Arizona        113417
+Arkansas        51945
+California     156361
+Colorado       103766
+Connecticut      4862
+Delaware         1982
+Florida         54090
+Georgia         58073
+Hawaii           6425
+Idaho           82677
+Illinois        55748
+Indiana         36097
+Iowa            55941
+Kansas          81787
+Kentucky        39650
+Louisiana       44930
+Maine           30920
+Maryland         9891
+Massachusetts    7826
+Michigan        56817
+Minnesota       79289
+Mississippi     47296
+Missouri        68995
+Montana        145587
+Nebraska        76483
+Nevada         109889
+New Hampshire    9027
+New Jersey       7521
+New Mexico     121412
+New York        47831
+North Carolina  48798
+North Dakota    69273
+Ohio            40975
+Oklahoma        68782
+Oregon          96184
+Pennsylvania    44966
+Rhode Island     1049
+South Carolina  30225
+South Dakota    75955
+Tennessee       41328
+Texas          262134
+Utah            82096
+Vermont          9267
+Virginia        39780
+Washington      66570
+West Virginia   24070
+Wisconsin       54464
+Wyoming         97203
+> # Cada fila viene identificada por un nombre del estado.
+> # Cada fila viene identificada por un nombre del estado.[C[Cstate.x77[K
+               Population Income Illiteracy Life Exp Murder HS Grad Frost
+Alabama              3615   3624        2.1    69.05   15.1    41.3    20
+Alaska                365   6315        1.5    69.31   11.3    66.7   152
+Arizona              2212   4530        1.8    70.55    7.8    58.1    15
+Arkansas             2110   3378        1.9    70.66   10.1    39.9    65
+California          21198   5114        1.1    71.71   10.3    62.6    20
+Colorado             2541   4884        0.7    72.06    6.8    63.9   166
+Connecticut          3100   5348        1.1    72.48    3.1    56.0   139
+Delaware              579   4809        0.9    70.06    6.2    54.6   103
+Florida              8277   4815        1.3    70.66   10.7    52.6    11
+Georgia              4931   4091        2.0    68.54   13.9    40.6    60
+Hawaii                868   4963        1.9    73.60    6.2    61.9     0
+Idaho                 813   4119        0.6    71.87    5.3    59.5   126
+Illinois            11197   5107        0.9    70.14   10.3    52.6   127
+Indiana              5313   4458        0.7    70.88    7.1    52.9   122
+Iowa                 2861   4628        0.5    72.56    2.3    59.0   140
+Kansas               2280   4669        0.6    72.58    4.5    59.9   114
+Kentucky             3387   3712        1.6    70.10   10.6    38.5    95
+Louisiana            3806   3545        2.8    68.76   13.2    42.2    12
+Maine                1058   3694        0.7    70.39    2.7    54.7   161
+Maryland             4122   5299        0.9    70.22    8.5    52.3   101
+Massachusetts        5814   4755        1.1    71.83    3.3    58.5   103
+Michigan             9111   4751        0.9    70.63   11.1    52.8   125
+Minnesota            3921   4675        0.6    72.96    2.3    57.6   160
+Mississippi          2341   3098        2.4    68.09   12.5    41.0    50
+Missouri             4767   4254        0.8    70.69    9.3    48.8   108
+Montana               746   4347        0.6    70.56    5.0    59.2   155
+Nebraska             1544   4508        0.6    72.60    2.9    59.3   139
+Nevada                590   5149        0.5    69.03   11.5    65.2   188
+New Hampshire         812   4281        0.7    71.23    3.3    57.6   174
+New Jersey           7333   5237        1.1    70.93    5.2    52.5   115
+New Mexico           1144   3601        2.2    70.32    9.7    55.2   120
+New York            18076   4903        1.4    70.55   10.9    52.7    82
+North Carolina       5441   3875        1.8    69.21   11.1    38.5    80
+North Dakota          637   5087        0.8    72.78    1.4    50.3   186
+Ohio                10735   4561        0.8    70.82    7.4    53.2   124
+Oklahoma             2715   3983        1.1    71.42    6.4    51.6    82
+Oregon               2284   4660        0.6    72.13    4.2    60.0    44
+Pennsylvania        11860   4449        1.0    70.43    6.1    50.2   126
+Rhode Island          931   4558        1.3    71.90    2.4    46.4   127
+South Carolina       2816   3635        2.3    67.96   11.6    37.8    65
+South Dakota          681   4167        0.5    72.08    1.7    53.3   172
+Tennessee            4173   3821        1.7    70.11   11.0    41.8    70
+Texas               12237   4188        2.2    70.90   12.2    47.4    35
+Utah                 1203   4022        0.6    72.90    4.5    67.3   137
+Vermont               472   3907        0.6    71.64    5.5    57.1   168
+Virginia             4981   4701        1.4    70.08    9.5    47.8    85
+Washington           3559   4864        0.6    71.72    4.3    63.5    32
+West Virginia        1799   3617        1.4    69.48    6.7    41.6   100
+Wisconsin            4589   4468        0.7    72.48    3.0    54.5   149
+Wyoming               376   4566        0.6    70.29    6.9    62.9   173
+                 Area
+Alabama         50708
+Alaska         566432
+Arizona        113417
+Arkansas        51945
+California     156361
+Colorado       103766
+Connecticut      4862
+Delaware         1982
+Florida         54090
+Georgia         58073
+Hawaii           6425
+Idaho           82677
+Illinois        55748
+Indiana         36097
+Iowa            55941
+Kansas          81787
+Kentucky        39650
+Louisiana       44930
+Maine           30920
+Maryland         9891
+Massachusetts    7826
+Michigan        56817
+Minnesota       79289
+Mississippi     47296
+Missouri        68995
+Montana        145587
+Nebraska        76483
+Nevada         109889
+New Hampshire    9027
+New Jersey       7521
+New Mexico     121412
+New York        47831
+North Carolina  48798
+North Dakota    69273
+Ohio            40975
+Oklahoma        68782
+Oregon          96184
+Pennsylvania    44966
+Rhode Island     1049
+South Carolina  30225
+South Dakota    75955
+Tennessee       41328
+Texas          262134
+Utah            82096
+Vermont          9267
+Virginia        39780
+Washington      66570
+West Virginia   24070
+Wisconsin       54464
+Wyoming         97203
+> 
+> dimnames(state.x77)
+[[1]]
+ [1] "Alabama"        "Alaska"         "Arizona"        "Arkansas"      
+ [5] "California"     "Colorado"       "Connecticut"    "Delaware"      
+ [9] "Florida"        "Georgia"        "Hawaii"         "Idaho"         
+[13] "Illinois"       "Indiana"        "Iowa"           "Kansas"        
+[17] "Kentucky"       "Louisiana"      "Maine"          "Maryland"      
+[21] "Massachusetts"  "Michigan"       "Minnesota"      "Mississippi"   
+[25] "Missouri"       "Montana"        "Nebraska"       "Nevada"        
+[29] "New Hampshire"  "New Jersey"     "New Mexico"     "New York"      
+[33] "North Carolina" "North Dakota"   "Ohio"           "Oklahoma"      
+[37] "Oregon"         "Pennsylvania"   "Rhode Island"   "South Carolina"
+[41] "South Dakota"   "Tennessee"      "Texas"          "Utah"          
+[45] "Vermont"        "Virginia"       "Washington"     "West Virginia" 
+[49] "Wisconsin"      "Wyoming"       
+
+[[2]]
+[1] "Population" "Income"     "Illiteracy" "Life Exp"   "Murder"    
+[6] "HS Grad"    "Frost"      "Area"      
+
+> # Esto n[Kanterior dimnames nos muestra los nombres de las filas o c[K[K[Ky columnas (si los tiene).
+> #Vemos que la columna 5 indica la tasa de asesinatos.
+> murder <- state.x77(,5)
+[1mError: no se pudo encontrar la función "state.x77"
+[0m> murder <- state.x77(,5)[C[C[1P,5)[,5)[C[C[C[K]
+> murder
+       Alabama         Alaska        Arizona       Arkansas     California 
+          15.1           11.3            7.8           10.1           10.3 
+      Colorado    Connecticut       Delaware        Florida        Georgia 
+           6.8            3.1            6.2           10.7           13.9 
+        Hawaii          Idaho       Illinois        Indiana           Iowa 
+           6.2            5.3           10.3            7.1            2.3 
+        Kansas       Kentucky      Louisiana          Maine       Maryland 
+           4.5           10.6           13.2            2.7            8.5 
+ Massachusetts       Michigan      Minnesota    Mississippi       Missouri 
+           3.3           11.1            2.3           12.5            9.3 
+       Montana       Nebraska         Nevada  New Hampshire     New Jersey 
+           5.0            2.9           11.5            3.3            5.2 
+    New Mexico       New York North Carolina   North Dakota           Ohio 
+           9.7           10.9           11.1            1.4            7.4 
+      Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina 
+           6.4            4.2            6.1            2.4           11.6 
+  South Dakota      Tennessee          Texas           Utah        Vermont 
+           1.7           11.0           12.2            4.5            5.5 
+      Virginia     Washington  West Virginia      Wisconsin        Wyoming 
+           9.5            4.3            6.7            3.0            6.9 
+> 
+> # e[KEl [,45[K[K5] indica todas las filas y unicamente la 5 columna.
+> # El [,5] indica todas las filas y unicamente la 5 columna.[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+> state.x77["Alabama"][K,]
+Population     Income Illiteracy   Life Exp     Murder    HS Grad      Frost 
+   3615.00    3624.00       2.10      69.05      15.10      41.30      20.00 
+      Area 
+  50708.00 
+> state.x77["Alabama",]5]
+[1] 15.1
+> 
+> #Podemos indicar varios.
+> state.x77[c("Alabama","Virt[Kginia"),]
+         Population Income Illiteracy Life Exp Murder HS Grad Frost  Area
+Alabama        3615   3624        2.1    69.05   15.1    41.3    20 50708
+Virginia       4981   4701        1.4    70.08    9.5    47.8    85 39780
+> 
+> 
+> row.names(state.x77)
+ [1] "Alabama"        "Alaska"         "Arizona"        "Arkansas"      
+ [5] "California"     "Colorado"       "Connecticut"    "Delaware"      
+ [9] "Florida"        "Georgia"        "Hawaii"         "Idaho"         
+[13] "Illinois"       "Indiana"        "Iowa"           "Kansas"        
+[17] "Kentucky"       "Louisiana"      "Maine"          "Maryland"      
+[21] "Massachusetts"  "Michigan"       "Minnesota"      "Mississippi"   
+[25] "Missouri"       "Montana"        "Nebraska"       "Nevada"        
+[29] "New Hampshire"  "New Jersey"     "New Mexico"     "New York"      
+[33] "North Carolina" "North Dakota"   "Ohio"           "Oklahoma"      
+[37] "Oregon"         "Pennsylvania"   "Rhode Island"   "South Carolina"
+[41] "South Dakota"   "Tennessee"      "Texas"          "Utah"          
+[45] "Vermont"        "Virginia"       "Washington"     "West Virginia" 
+[49] "Wisconsin"      "Wyoming"       
+> 
+> colnames(statex77)[K[K[K[Kx.[K[K.x77)
+[1] "Population" "Income"     "Illiteracy" "Life Exp"   "Murder"    
+[6] "HS Grad"    "Frost"      "Area"      
+> #Lo anterior nos devolvia nombred e [K[K[K[K de filas, y colnames el nombre de columnas
+> 
+> 
+> illit <- sat[K[Ktate.x77[,3]
+> # G[KAhi guardamos la tabla de analfateb[Ktis[K[K[K[K[Kbetismo.
+> states <- states.abb
+[1mError: objeto 'states.abb' no encontrado
+[0m> states <- states.abb[Kv
+[1mError: objeto 'states.abv' no encontrado
+[0m> states <- states.abv[Kxab7ab7ab.ab[C[Cb
+[1mError: objeto 'states.x77.abb' no encontrado
+[0m> states <- states.x77.abb[4Pabv[Kb[C[1P.abb
+> ¢[K# Ahi guardamos las abreviator[K[Kuras de los estados.
+> 
+> state.abb
+ [1] "AL" "AK" "AZ" "AR" "CA" "CO" "CT" "DE" "FL" "GA" "HI" "ID" "IL" "IN" "IA"
+[16] "KS" "KY" "LA" "ME" "MD" "MA" "MI" "MN" "MS" "MO" "MT" "NE" "NV" "NH" "NJ"
+[31] "NM" "NY" "NC" "ND" "OH" "OK" "OR" "PA" "RI" "SC" "SD" "TN" "TX" "UT" "VT"
+[46] "VA" "WA" "WV" "WI" "WY"
+> 
+> 
+> #Un dibujito simple
+> 
+> plot(o[Killit, murder, pch="*")
+> #Eso pintaria un grafico de puntos
+> 
+> #Tambien se puede hacer de manera interactiva para que nos muestre, al pulsar, el st[K[Kestado que representa.
+> identify(illit, murder, states)
+[1mError en identify.default(illit, murder, states) : 
+  plot.new has not been called yet
+[0m> identify(illit, murder, states)[C[C#Tambien se puede hacer de manera interactiva para que nos muestre, al pulsar, el estado que representa.[C[C[CEso pintaria un grafico de puntos[K[C[C[6Pplot(illit, murder, pch="*")
+> plot(illit, murder, pch="*")[C[Cidentify(illit, murder, states)
+[1mwarning: nearest point already identified
+[0m[1mwarning: nearest point already identified
+[0m[1mwarning: nearest point already identified
+[0m[1mwarning: nearest point already identified
+[0m[1]  1  2  5 10 22 24 28 33 43
+> 
+> nasty <[K[K[K[K[K[K[K#Ahora definimos una vair[K[Kriable donde los asesinatos sean > 10. Lo aplicaremos sobre el dibujo.
+> #Cada llamada a plot hace un dibujo nuevo. points son[Kbre una funcion que ya piede es[Kxistir, añade un punto[K[K[K[K[K[K[K[Kpuntos sobre una grafica existente.
+> points(illit[nasty],[K, murder[nasty], pch="0")
+[1mError en points(illit[nasty], murder[nasty], pch = "0") : 
+  objeto 'nasty' no encontrado
+[0m> points(illit[nasty], murder[nasty], pch="0")[C[C#Cada llamada a plot hace un dibujo nuevo. points sobre una funcion que ya piede existir, añade puntos sobre una grafica existente.[C[C[87Ppoints(illit[nasty], murder[nasty], pch="0")[C[C[K
+> 
+> nasty <- murder > 10
+> nasty <- murder > 10[C[Cpoints(illit[nasty], murder[nasty], pch="0")
+> # Esto resalta los puntos donde los asesinatos son mayores que 10
+> 
+> 
+> 
+> plot(illit, murder, pch="*")
+> @Ahor aañadimo [Ks un [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K@[K#Ahora añadimos un texto en ciertos puntos
+> text(illiy[nasty], murder[nasty], states[a[Knasty], adj=-0.25)[1P[1@t[1@+[1P
+> 
+> 
+> datos_estados <- data.frame( murder=murder, illit=illit, ab_state=states, state=row.names(state.x77), row.names=NULL, stringsAsFactors=F)
+> #Asi creamos un[Kn dataFrame!
+> #Vemos qeu dentro del mismo objeto mezcalamo[K[K[K[K[Ka[Klamos a[Kc[Kvariables numericas con variables ue no lo son.
+> datos_estados
+   murder illit ab_state          state
+1    15.1   2.1       AL        Alabama
+2    11.3   1.5       AK         Alaska
+3     7.8   1.8       AZ        Arizona
+4    10.1   1.9       AR       Arkansas
+5    10.3   1.1       CA     California
+6     6.8   0.7       CO       Colorado
+7     3.1   1.1       CT    Connecticut
+8     6.2   0.9       DE       Delaware
+9    10.7   1.3       FL        Florida
+10   13.9   2.0       GA        Georgia
+11    6.2   1.9       HI         Hawaii
+12    5.3   0.6       ID          Idaho
+13   10.3   0.9       IL       Illinois
+14    7.1   0.7       IN        Indiana
+15    2.3   0.5       IA           Iowa
+16    4.5   0.6       KS         Kansas
+17   10.6   1.6       KY       Kentucky
+18   13.2   2.8       LA      Louisiana
+19    2.7   0.7       ME          Maine
+20    8.5   0.9       MD       Maryland
+21    3.3   1.1       MA  Massachusetts
+22   11.1   0.9       MI       Michigan
+23    2.3   0.6       MN      Minnesota
+24   12.5   2.4       MS    Mississippi
+25    9.3   0.8       MO       Missouri
+26    5.0   0.6       MT        Montana
+27    2.9   0.6       NE       Nebraska
+28   11.5   0.5       NV         Nevada
+29    3.3   0.7       NH  New Hampshire
+30    5.2   1.1       NJ     New Jersey
+31    9.7   2.2       NM     New Mexico
+32   10.9   1.4       NY       New York
+33   11.1   1.8       NC North Carolina
+34    1.4   0.8       ND   North Dakota
+35    7.4   0.8       OH           Ohio
+36    6.4   1.1       OK       Oklahoma
+37    4.2   0.6       OR         Oregon
+38    6.1   1.0       PA   Pennsylvania
+39    2.4   1.3       RI   Rhode Island
+40   11.6   2.3       SC South Carolina
+41    1.7   0.5       SD   South Dakota
+42   11.0   1.7       TN      Tennessee
+43   12.2   2.2       TX          Texas
+44    4.5   0.6       UT           Utah
+45    5.5   0.6       VT        Vermont
+46    9.5   1.4       VA       Virginia
+47    4.3   0.6       WA     Washington
+48    6.7   1.4       WV  West Virginia
+49    3.0   0.7       WI      Wisconsin
+50    6.9   0.6       WY        Wyoming
+> 
+> #Para acceder a las columnas de un dataframe
+> datos$illit_$illite$illits$illitt$illita$illitd$illito$illits$illit
+ [1] 2.1 1.5 1.8 1.9 1.1 0.7 1.1 0.9 1.3 2.0 1.9 0.6 0.9 0.7 0.5 0.6 1.6 2.8 0.7
+[20] 0.9 1.1 0.9 0.6 2.4 0.8 0.6 0.6 0.5 0.7 1.1 2.2 1.4 1.8 0.8 0.8 1.1 0.6 1.0
+[39] 1.3 2.3 0.5 1.7 2.2 0.6 0.6 1.4 0.6 1.4 0.7 0.6
+> #De esa forma seleccionamos columnas
+> 
+> names(datos_estados)
+[1] "murder"   "illit"    "ab_state" "state"   
+> #Obtenemos los nombres de las columnas no[K[Kcon names
+> 
+> # o[KO tambien podemos con la noti[Kacion matricial[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmediante indices
+> datos_rs[K[Kestados[,2]
+ [1] 2.1 1.5 1.8 1.9 1.1 0.7 1.1 0.9 1.3 2.0 1.9 0.6 0.9 0.7 0.5 0.6 1.6 2.8 0.7
+[20] 0.9 1.1 0.9 0.6 2.4 0.8 0.6 0.6 0.5 0.7 1.1 2.2 1.4 1.8 0.8 0.8 1.1 0.6 1.0
+[39] 1.3 2.3 0.5 1.7 2.2 0.6 0.6 1.4 0.6 1.4 0.7 0.6
+> 
+> # O tambien por el nombre
+> datos_estados[,"illit"]
+ [1] 2.1 1.5 1.8 1.9 1.1 0.7 1.1 0.9 1.3 2.0 1.9 0.6 0.9 0.7 0.5 0.6 1.6 2.8 0.7
+[20] 0.9 1.1 0.9 0.6 2.4 0.8 0.6 0.6 0.5 0.7 1.1 2.2 1.4 1.8 0.8 0.8 1.1 0.6 1.0
+[39] 1.3 2.3 0.5 1.7 2.2 0.6 0.6 1.4 0.6 1.4 0.7 0.6
+> #L [Ka mas a[Khabitual cuando se conocen los nombres seria la primera: datos_estados$illit
+> 
+> 
+> datlse[K[K[Kos_estados[1, c(2, 1)]
+  illit murder
+1   2.1   15.1
+> #Asi hemos cambiado el orden de las columnas (con un vector 2,1)
+> 
+> #Condiciones para seleccionar
+> datos_estados[datos_estados$murder > 10, ]
+   murder illit ab_state          state
+1    15.1   2.1       AL        Alabama
+2    11.3   1.5       AK         Alaska
+4    10.1   1.9       AR       Arkansas
+5    10.3   1.1       CA     California
+9    10.7   1.3       FL        Florida
+10   13.9   2.0       GA        Georgia
+13   10.3   0.9       IL       Illinois
+17   10.6   1.6       KY       Kentucky
+18   13.2   2.8       LA      Louisiana
+22   11.1   0.9       MI       Michigan
+24   12.5   2.4       MS    Mississippi
+28   11.5   0.5       NV         Nevada
+32   10.9   1.4       NY       New York
+33   11.1   1.8       NC North Carolina
+40   11.6   2.3       SC South Carolina
+42   11.0   1.7       TN      Tennessee
+43   12.2   2.2       TX          Texas
+> 
+> #Seleccionar algunas columnas en un cierto orden.
+> datos_estados[datos_estados$murder > 10 c[K[K, c("state", "illit", "murder")]
+            state illit murder
+1         Alabama   2.1   15.1
+2          Alaska   1.5   11.3
+4        Arkansas   1.9   10.1
+5      California   1.1   10.3
+9         Florida   1.3   10.7
+10        Georgia   2.0   13.9
+13       Illinois   0.9   10.3
+17       Kentucky   1.6   10.6
+18      Louisiana   2.8   13.2
+22       Michigan   0.9   11.1
+24    Mississippi   2.4   12.5
+28         Nevada   0.5   11.5
+32       New York   1.4   10.9
+33 North Carolina   1.8   11.1
+40 South Carolina   2.3   11.6
+42      Tennessee   1.7   11.0
+43          Texas   2.2   12.2
+> 
+> 
+> 
+> 
+> # Cómo leer un dataframe de un fichero!!! ??? read_[K.table !
+> # Esto generara un data frame con los datos de un fichero my_ri[K[Kiris.txt. Le decimos ta[K[Kque no tiene cabeceras (si no, la primera fila la cof[Kgeria como cabecera ). El[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+> 
+> # Esto generara un data frame con los datos de un fichero my_iris.txt. Le decimos que no tiene cabeceras (si no, la primera fila la cogeria como cabecer
+> a[K#. L[KEl e[K[Kseparados es la barra vertical
+> @[K#Las cadenas estan delimitadas por comillas dobles
+> #Los nombres de las columnas seran las siguiente.
+> #Los tipos de los datos
+> 
+> liria[Kos <-
++ [1m
+[0m> # Si se conozco [K[K[K[Kce l [K[Kel numero de registros del fichero, es buena idea pasarle un argumento que le indica el numero de files[K[Kas. 
+> # help[Kp(read.table)
+> e[Khelp(read.table)
+[?1049h[?1h=read.table                package:utils                R Documentation
+
+[4mData[24m [4mInput[24m
+
+[4mDescription[24m:
+
+     Reads a file in table format and creates a data frame from it,
+     with cases corresponding to lines and variables to fields in the
+     file.
+
+[4mUsage[24m:
+
+     read.table(file, header = FALSE, sep = "", quote = "\"'",
+                dec = ".", row.names, col.names,
+                as.is = !stringsAsFactors,
+                na.strings = "NA", colClasses = NA, nrows = -1,
+                skip = 0, check.names = TRUE, fill = !blank.lines.skip,
+                strip.white = FALSE, blank.lines.skip = TRUE,
+                comment.char = "#",
+                allowEscapes = FALSE, flush = FALSE,
+                stringsAsFactors = default.stringsAsFactors(),
+                fileEncoding = "", encoding = "unknown", text)
+     
+     read.csv(file, header = TRUE, sep = ",", quote = "\"",
+              dec = ".", fill = TRUE, comment.char = "", ...)
+     
+     read.csv2(file, header = TRUE, sep = ";", quote = "\"",
+               dec = ",", fill = TRUE, comment.char = "", ...)
+     
+     read.delim(file, header = TRUE, sep = "\t", quote = "\"",
+                dec = ".", fill = TRUE, comment.char = "", ...)
+     
+     read.delim2(file, header = TRUE, sep = "\t", quote = "\"",
+                 dec = ",", fill = TRUE, comment.char = "", ...)
+     
+[4mArguments[24m:
+
+    file: the name of the file which the data are to be read from.
+          Each row of the table appears as one line of the file.  If it
+          does not contain an _absolute_ path, the file name is
+          _relative_ to the current working directory, ‘getwd()’.
+:[K[K          Tilde-expansion is performed where supported.  This can be a
+          compressed file (see ‘file’).
+
+          Alternatively, ‘file’ can be a readable text-mode connection
+          (which will be opened for reading if necessary, and if so
+          ‘close’d (and hence destroyed) at the end of the function
+          call).  (If ‘stdin()’ is used, the prompts for lines may be
+          somewhat confusing.  Terminate input with a blank line or an
+          EOF signal, ‘Ctrl-D’ on Unix and ‘Ctrl-Z’ on Windows.  Any
+          pushback on ‘stdin()’ will be cleared before return.)
+
+          ‘file’ can also be a complete URL.  (For the supported URL
+          schemes, see the ‘URLs’ section of the help for ‘url’.)
+
+  header: a logical value indicating whether the file contains the
+          names of the variables as its first line.  If missing, the
+          value is determined from the file format: ‘header’ is set to
+          ‘TRUE’ if and only if the first row contains one fewer field
+          than the number of columns.
+
+     sep: the field separator character.  Values on each line of the
+          file are separated by this character.  If ‘sep = ""’ (the
+          default for ‘read.table’) the separator is ‘white space’,
+          that is one or more spaces, tabs, newlines or carriage
+          returns.
+
+   quote: the set of quoting characters. To disable quoting altogether,
+          use ‘quote = ""’.  See ‘scan’ for the behaviour on quotes
+          embedded in quotes.  Quoting is only considered for columns
+          read as character, which is all of them unless ‘colClasses’
+          is specified.
+
+     dec: the character used in the file for decimal points.
+
+row.names: a vector of row names.  This can be a vector giving the
+          actual row names, or a single number giving the column of the
+          table which contains the row names, or character string
+          giving the name of the table column containing the row names.
+
+          If there is a header and the first row contains one fewer
+          field than the number of columns, the first column in the
+:[K[K          input is used for the row names.  Otherwise if ‘row.names’ is
+          missing, the rows are numbered.
+
+          Using ‘row.names = NULL’ forces row numbering. Missing or
+          ‘NULL’ ‘row.names’ generate row names that are considered to
+          be ‘automatic’ (and not preserved by ‘as.matrix’).
+
+col.names: a vector of optional names for the variables.  The default
+          is to use ‘"V"’ followed by the column number.
+
+   as.is: the default behavior of ‘read.table’ is to convert character
+          variables (which are not converted to logical, numeric or
+          complex) to factors.  The variable ‘as.is’ controls the
+          conversion of columns not otherwise specified by
+          ‘colClasses’.  Its value is either a vector of logicals
+          (values are recycled if necessary), or a vector of numeric or
+          character indices which specify which columns should not be
+          converted to factors.
+
+          Note: to suppress all conversions including those of numeric
+          columns, set ‘colClasses = "character"’.
+
+          Note that ‘as.is’ is specified per column (not per variable)
+          and so includes the column of row names (if any) and any
+          columns to be skipped.
+
+na.strings: a character vector of strings which are to be interpreted
+          as ‘NA’ values.  Blank fields are also considered to be
+          missing values in logical, integer, numeric and complex
+          fields.
+
+colClasses: character.  A vector of classes to be assumed for the
+          columns.  Recycled as necessary, or if the character vector
+          is named, unspecified values are taken to be ‘NA’.
+
+          Possible values are ‘NA’ (the default, when ‘type.convert’ is
+          used), ‘"NULL"’ (when the column is skipped), one of the
+          atomic vector classes (logical, integer, numeric, complex,
+          character, raw), or ‘"factor"’, ‘"Date"’ or ‘"POSIXct"’.
+          Otherwise there needs to be an ‘as’ method (from package
+          ‘methods’) for conversion from ‘"character"’ to the specified
+:[K[K          formal class.
+
+          Note that ‘colClasses’ is specified per column (not per
+          variable) and so includes the column of row names (if any).
+
+   nrows: integer: the maximum number of rows to read in.  Negative and
+          other invalid values are ignored.
+
+    skip: integer: the number of lines of the data file to skip before
+          beginning to read data.
+
+check.names: logical.  If ‘TRUE’ then the names of the variables in the
+          data frame are checked to ensure that they are syntactically
+          valid variable names.  If necessary they are adjusted (by
+          ‘make.names’) so that they are, and also to ensure that there
+          are no duplicates.
+
+    fill: logical. If ‘TRUE’ then in case the rows have unequal length,
+          blank fields are implicitly added.  See ‘Details’.
+
+strip.white: logical. Used only when ‘sep’ has been specified, and
+          allows the stripping of leading and trailing white space from
+          unquoted ‘character’ fields (‘numeric’ fields are always
+          stripped).  See ‘scan’ for further details (including the
+          exact meaning of ‘white space’), remembering that the columns
+          may include the row names.
+
+blank.lines.skip: logical: if ‘TRUE’ blank lines in the input are
+          ignored.
+
+comment.char: character: a character vector of length one containing a
+          single character or an empty string.  Use ‘""’ to turn off
+          the interpretation of comments altogether.
+
+allowEscapes: logical.  Should C-style escapes such as ‘\n’ be
+          processed or read verbatim (the default)?  Note that if not
+          within quotes these could be interpreted as a delimiter (but
+          not as a comment character).  For more details see ‘scan’.
+
+   flush: logical: if ‘TRUE’, ‘scan’ will flush to the end of the line
+          after reading the last of the fields requested.  This allows
+:[K[K[?1l>[?1049l> # Ta [Kl ar[K[Kparametro es nrows
+> 
+> lirios <-
++    read.table("mu_it[Kris.[K[K[K[K[K[K[K[Kmaterial_clase/my_iris.txt", header=F, sep="|", quote="",
++       col.names=c"[K("longsep", "anchsep","longpet","anchpet","clase"),
++       colClasses="[Kc("numeric","numeric","numeric","numeric","numeric","character"),
++       sr[KtringsAsFactori[Ks=F)
+[1mError en scan(file, what, nmax, sep, dec, quote, skip, nlines, na.strings,  : 
+  scan() esperaba 'a real', obtuvo 'setosa'
+[0m>       stringsAsFactors=F)[C[C[C[C[C[C[C[CcolClasses=c("numeric","numeric","numeric","numeric","numeric","character"),[C[C[C[C[C[C[C[C[C[C[C[14P.names=c("longsep", "anchsep","longpet","anchpet","clase"),[C[C[C[C[Cread.table("material_clase/my_iris.txt", header=F, sep="|", quote="",[C[Clirios <-[K[C[C# Tal parametro es nrows[C[C[15Plirios <-[C[C   read.table("material_clase/my_iris.txt", header=F, sep="|", quote="",[C[Clirios <-[K
++ lirios <-[C[C      stringsAsFactors=F)[C[C[C[C[C[C[C[CcolClasses=c("numeric","numeric","numeric","numeric","numeric","character"),[C[C[C[C[C[C[C[C[C[C[C[14P.names=c("longsep", "anchsep","longpet","anchpet","clase"),[C[C[C[C[Cread.table("material_clase/my_iris.txt", header=F, sep="|", quote="",[C[Clirios <-[K[C[C# Tal parametro es nrows[C[C[8Phelp(read.table)[C[C# help(read.table)[C[C[C[CSi se conoce el numero de registros del fichero, es buena idea pasarle un argumento que le indica el numero de filas. [C[Clirios <-[K[C[C# Si se conoce el numero de registros del fichero, es buena idea pasarle un argumento que le indica el numero de filas. [C[C[C[Chelp(read.table)[K[C[C[2Phelp(read.table)[1m
+[0m> 
+> # NO lo hemos creado... pero lo borrariamos asi
+> rm(lirios)
+[1mMensajes de aviso perdidos
+[0m[1mIn rm(lirios) : objeto 'lirios' no encontrado
+[0m> 
+> 
+> #Podemos guardar un objeto a fichero.
+> sae[Kve(murder, "murder_saved.R"
++ 
++ )
+[1mError en save(murder, "murder_saved.R") : 
+  object ‘murder_saved.R’ not found
+[0m> )save(murder, "murder_saved.R"[C[C#Podemos guardar un objeto a fichero.[C[Crm(lirios)[K[C[C# NO lo hemos creado... pero lo borrariamos asi[C[Clirios <-[K[C[C      stringsAsFactors=F)[C[C[C[C[C[C[C[CcolClasses=c("numeric","numeric","numeric","numeric","numeric","character"),[C[C[C[C[C[C[C[C[C[C[C[14P.names=c("longsep", "anchsep","longpet","anchpet","clase"),[C[C[C[C[Cread.table("material_clase/my_iris.txt", header=F, sep="|", quote="",[C[Clirios <-[K[C[C# Tal parametro es nrows[C[C[8Phelp(read.table)[C[C# help(read.table)[C[C[C[CSi se conoce el numero de registros del fichero, es buena idea pasarle un argumento que le indica el numero de filas. [C[Clirios <-[K[C[C#Los tipos de los datos[C[C[C[C[C[C[Cnombres de las columnas seran las siguiente.[C[C[C[Cas cadenas estan delimitadas por comillas dobles[C[C[C[15P. Elseparados es la barra vertical[C[C[C Esto generara un data frame con los datos de un fichero my_iris.txt. Le decimos que no tiene cabeceras (si no, la primera fila la cogeria como cabecer[C[C[C[C[94PCómo leer un dataframe de un fichero!!! ??? read.table ![C[Cdatos_estados[datos_estados$murder > 10, c("state", "illit", "murder")][C[C[22P#Seleccionar algunas columnas en un cierto orden.[C[Cdatos_estados[datos_estados$murder > 10, c("state", "illit", "murder")][C[C[13P# Cómo leer un dataframe de un fichero!!! ??? read.table ![C[C[C[CEsto generara un data frame con los datos de un fichero my_iris.txt. Le decimos que no tiene cabeceras (si no, la primera fila la cogeria como cabecer[C[C[C. Elseparados es la barra vertical[K[C[C[CLas cadenas estan delimitadas por comillas dobles[C[C[C[C[1Pos nombres de las columnas seran las siguiente.[C[C[C[C[C[C[C[26Ptipos de los datos[C[C[14Plirios <-[C[C# Si se conoce el numero de registros del fichero, es buena idea pasarle un argumento que le indica el numero de filas. [C[C[C[Chelp(read.table)[K[C[C[2Phelp(read.table)[C[C# Tal parametro es nrows[C[C[15Plirios <-[C[C   read.table("material_clase/my_iris.txt", header=F, sep="|", quote="",[C[C[C[C[C[4P   col.names=c("longsep", "anchsep","longpet","anchpet","clase"),[C[C[C[C[C[C[C[C[C[C[CClasses=c("numeric","numeric","numeric","numeric","numeric","character"),[C[C[C[C[C[C[C[CstringsAsFactors=F)[K[C[C[16Plirios <-[C[C# NO lo hemos creado... pero lo borrariamos asi[C[Crm(lirios)[K[K[K[K[K[K[K[K[K[K[K
+> 
+> # Y para cargarlo: load("murder_saved.R")
+> 
+> #En general, en R es buena idea crear un directorio para cada proyecto, debido a l[Keste salvado de ficheros, y a la posibilidad
+> de q[K[K[K[K# de que R nos guarde toda la sesión a fichero al salir.
+> # de que R nos guarde toda la sesión a fichero al salir.[C[C[CEn general, en R es buena idea crear un directorio para cada proyecto, debido a este salvado de ficheros, y a la posibilidad[C[C[C Y para cargarlo: load("murder_saved.R")[K[C[C)[Ksave(murder, "murder_saved.R"[C[C#Podemos guardar un objeto a fichero.[C[Crm(lirios)[K[C[C# NO lo hemos creado... pero lo borrariamos asi[C[Clirios <-[K[C[C      stringsAsFactors=F)[C[C[C[C[C[C[C[CcolClasses=c("numeric","numeric","numeric","numeric","numeric","character"),[C[C[C[C[C[C[C[CstringsAsFactors=F)[K[C[C[16Plirios <- read.table("m[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+> 
+> 
+> # D[KFUNCIONES
+> alcuadrado <- function/x( x[K[K[K[K[K(x) x^2
+> alcuadrado
+function(x) x^2
+> alcuadrado(3)
+[1] 9
+> 
+> # En las funciones, lao[K[Ko que devuelven, seria la ultima linea antes de devolver el control.
+> alcud[K[K[K[K
+[1mError: objeto 'a' no encontrado
+[0m> 
+> #Podemos aplicarlo en e¡vec[K[K[K[K[Kvectores
+> 
+> alcuadrado(1:5)
+[1]  1  4  9 16 25
+> 
+> 
+> is.min <- function(c[Kx) x==min(x)
+> 
+> is.min(datos_estados$illit)
+ [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[13] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[25] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[37] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[49] FALSE FALSE
+> 
+> datos_estados$state[is.min/datos_estad[K[K[K[K[K[K[K[K[K[K[K[K(datos_estados)[K$illit)]
+[1] "Iowa"         "Nevada"       "South Dakota"
+> 
+> 
+> source("nuevo[K[K[K[K[K[K[K[K[K[K[K[K[Kdatos_estados$state[is.min(datos_estados$illit)][C[C[Ksource("material_clase/nuevoalcuadrado.r")
+> #Source obtiene como codigo un .r. Esto es util para definir funciones en ficheros por ejemplo.
+> 
+> nuevoalcuadrado
+function(x) {
+  cat(file=stderr(), "Estoy en nuevo al cuadrado.\n")
+  x * x
+}
+> nuevoalcuadrado(1:5)
+[1mEstoy en nuevo al cuadrado.
+[0m[1]  1  4  9 16 25
+> 
+> #Ojo, sol [Ko imprime una vez el texto por q[K[Kque la funcione[K se llama S[KSOLAMENTE Una [K[K[K[Kuna vez
+> #No, [K[K unav[K vez por cada elemento del vector como podriamos pensar
+> 
+> # Salimos con q()
+> q()
+Save workspace image? [y/n/c]: y
+bash-3.2$ ls -ltr
+total 112
+-rw-r--r--  1 agartime  staff      6 17 ene 16:34 README.md
+drwxr-xr-x  8 agartime  staff    272 17 ene 16:43 material_clase
+-rw-r--r--  1 agartime  staff  52901 17 ene 17:43 practica_1.out
+bash-3.2$ script off
+Script started, output file is off
+[?1034hbash-3.2$ man script
+[?1049h[?1h=
+SCRIPT(1)                 BSD General Commands Manual                SCRIPT(1)
+
+[1mNAME[0m
+     [1mscript[0m -- make typescript of terminal session
+
+[1mSYNOPSIS[0m
+     [1mscript[0m [[1m-akq[0m] [[1m-t[0m [4mtime[24m] [[4mfile[24m [[4mcommand[24m [4m...[24m]]
+
+[1mDESCRIPTION[0m
+     The [1mscript[0m utility makes a typescript of everything printed on your terminal.  It is useful for students who need a hardcopy record of
+     an interactive session as proof of an assignment, as the typescript file can be printed out later with lpr(1).
+
+     If the argument [4mfile[24m is given, [1mscript[0m saves all dialogue in [4mfile[24m.  If no file name is given, the typescript is saved in the file
+     [4mtypescript[24m.
+
+     If the argument [4mcommand[24m is given, [1mscript[0m will run the specified command with an optional argument vector instead of an interactive
+     shell.
+
+     The following options are available:
+
+     [1m-a[0m      Append the output to [4mfile[24m or [4mtypescript[24m, retaining the prior contents.
+
+     [1m-k[0m      Log keys sent to program as well as output.
+
+     [1m-q[0m      Run in quiet mode, omit the start and stop status messages.
+
+     [1m-t[0m [4mtime[24m
+             Specify time interval between flushing script output file.  A value of 0 causes [1mscript[0m to flush for every character I/O event.
+             The default interval is 30 seconds.
+
+     The script ends when the forked shell (or command) exits (a [4mcontrol-D[24m to exit the Bourne shell (sh(1)), and [4mexit[24m, [4mlogout[24m or [4mcontrol-D[24m
+     (if [4mignoreeof[24m is not set) for the C-shell, csh(1)).
+
+     Certain interactive commands, such as vi(1), create garbage in the typescript file.  The [1mscript[0m utility works best with commands that
+     do not manipulate the screen.  The results are meant to emulate a hardcopy terminal, not an addressable one.
+
+[1mENVIRONMENT[0m
+     The following environment variable is utilized by [1mscript[0m:
+
+     SHELL  If the variable SHELL exists, the shell forked by [1mscript[0m will be that shell.  If SHELL is not set, the Bourne shell is assumed.
+:[K[K            (Most shells set this variable automatically).
+
+[1mSEE[0m [1mALSO[0m
+     csh(1) (for the [4mhistory[24m mechanism).
+
+[1mHISTORY[0m
+     The [1mscript[0m command appeared in 3.0BSD.
+
+[1mBUGS[0m
+     The [1mscript[0m utility places [1meverything[0m in the log file, including linefeeds and backspaces.  This is not what the naive user expects.
+
+     It is not possible to specify a command without also naming the script file because of argument parsing compatibility issues.
+
+     When running in [1m-k[0m mode, echo cancelling is far from ideal.  The slave terminal mode is checked for ECHO mode to check when to avoid
+     manual echo logging.  This does not work when in a raw mode where the program being run is doing manual echo.
+
+BSD                            January 22, 2004                            BSD
+[7m(END) [27m[K[K[K[7m(END) [27m[K[K[?1l>[?1049lbash-3.2$ script
+Script started, output file is typescript
+[?1034hbash-3.2$ script
+Script started, output file is typescript
+[?1034hbash-3.2$ ls -ltra
+total 160
+drwxr-xr-x  14 agartime  staff    476 17 ene 16:34 ..
+-rw-r--r--   1 agartime  staff      6 17 ene 16:34 README.md
+drwxr-xr-x   8 agartime  staff    272 17 ene 16:43 material_clase
+-rw-------   1 agartime  staff   7943 17 ene 17:43 .Rhistory
+-rw-r--r--   1 agartime  staff   3424 17 ene 17:43 .RData
+drwxr-xr-x   9 agartime  staff    306 17 ene 17:44 .
+-rw-r--r--   1 agartime  staff     43 17 ene 17:44 typescript
+-rw-r--r--   1 agartime  staff  55525 17 ene 17:44 practica_1.out
+-rw-r--r--   1 agartime  staff   3336 17 ene 17:44 off
+bash-3.2$ rm -f typescript [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kman script
+[?1049h[?1h=
+SCRIPT(1)                 BSD General Commands Manual                SCRIPT(1)
+
+[1mNAME[0m
+     [1mscript[0m -- make typescript of terminal session
+
+[1mSYNOPSIS[0m
+     [1mscript[0m [[1m-akq[0m] [[1m-t[0m [4mtime[24m] [[4mfile[24m [[4mcommand[24m [4m...[24m]]
+
+[1mDESCRIPTION[0m
+     The [1mscript[0m utility makes a typescript of everything printed on your terminal.  It is useful for students who need a hardcopy record of
+     an interactive session as proof of an assignment, as the typescript file can be printed out later with lpr(1).
+
+     If the argument [4mfile[24m is given, [1mscript[0m saves all dialogue in [4mfile[24m.  If no file name is given, the typescript is saved in the file
+     [4mtypescript[24m.
+
+     If the argument [4mcommand[24m is given, [1mscript[0m will run the specified command with an optional argument vector instead of an interactive
+     shell.
+
+     The following options are available:
+
+     [1m-a[0m      Append the output to [4mfile[24m or [4mtypescript[24m, retaining the prior contents.
+
+     [1m-k[0m      Log keys sent to program as well as output.
+
+     [1m-q[0m      Run in quiet mode, omit the start and stop status messages.
+
+     [1m-t[0m [4mtime[24m
+             Specify time interval between flushing script output file.  A value of 0 causes [1mscript[0m to flush for every character I/O event.
+             The default interval is 30 seconds.
+
+     The script ends when the forked shell (or command) exits (a [4mcontrol-D[24m to exit the Bourne shell (sh(1)), and [4mexit[24m, [4mlogout[24m or [4mcontrol-D[24m
+     (if [4mignoreeof[24m is not set) for the C-shell, csh(1)).
+
+     Certain interactive commands, such as vi(1), create garbage in the typescript file.  The [1mscript[0m utility works best with commands that
+     do not manipulate the screen.  The results are meant to emulate a hardcopy terminal, not an addressable one.
+
+[1mENVIRONMENT[0m
+     The following environment variable is utilized by [1mscript[0m:
+
+     SHELL  If the variable SHELL exists, the shell forked by [1mscript[0m will be that shell.  If SHELL is not set, the Bourne shell is assumed.
+:[K[K            (Most shells set this variable automatically).
+
+[1mSEE[0m [1mALSO[0m
+     csh(1) (for the [4mhistory[24m mechanism).
+
+[1mHISTORY[0m
+     The [1mscript[0m command appeared in 3.0BSD.
+
+[1mBUGS[0m
+     The [1mscript[0m utility places [1meverything[0m in the log file, including linefeeds and backspaces.  This is not what the naive user expects.
+
+     It is not possible to specify a command without also naming the script file because of argument parsing compatibility issues.
+
+     When running in [1m-k[0m mode, echo cancelling is far from ideal.  The slave terminal mode is checked for ECHO mode to check when to avoid
+     manual echo logging.  This does not work when in a raw mode where the program being run is doing manual echo.
+
+BSD                            January 22, 2004                            BSD
+[7m(END) [27m[K[K[?1l>[?1049lbash-3.2$ eit[K[Kxit
+exit
+
+Script done, output file is typescript
+bash-3.2$ exit
+exit
+
+Script done, output file is typescript
+bash-3.2$ exit
+exit
+
+Script done, output file is off
+bash-3.2$ exit
+exit
+
+Script done on Fri Jan 17 17:44:51 2014
