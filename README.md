@@ -30,6 +30,9 @@ Lessons by day:
  * [webhdfs](./webhdfs) - Hadoop WebHDFS REST API samples.
  * [hadoop_streaming](./hadoop_streaming) - Hadoop Streaming Samples using Awk and Ruby.
 
+* Jan 17th-18th, 2014:
+ * [R](./R) - First steps in R. Step by step lessons as showed in class.
+
 Deliverables:
 -------------
 

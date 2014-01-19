@@ -90,3 +90,9 @@ You may create an Eclipse Project executing:
 
       $ mvn eclipse:clean eclipse:eclipse
 
+Notes:
+------
+
+Histogram may be improved. There's some bug in the mappers (offset is used as value instead of Text). We use secondary sort but not in the best way because every single value will end in the same reducer so it won't scale good. Anyway, It can be a nice example about how to implement Secondary Sort. I would like to note that Group Comparator usage doesn't take place during combiner phase so min max should work ok. There's an issue already opened: https://issues.apache.org/jira/browse/MAPREDUCE-3310
+
+
