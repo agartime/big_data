@@ -9,5 +9,5 @@ R (http://www.r-project.org) lessons.
 * [samples_4](./samples_4) - 18th Jan 2014 Samples.
 * [samples_5](./samples_5) - 18th Jan 2014 Samples.
 * [samples_6](./samples_6) - Temporal series Samples (24th Jan 2014).
-* [samples_7](./samples_7) - Main Components analysis samples (24th Jan 2014).
+* [samples_7](./samples_7) - Principal Components analysis samples (24th Jan 2014).
 
