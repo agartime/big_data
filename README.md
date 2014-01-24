@@ -34,7 +34,7 @@ Lessons by day:
  * [R](./R) - First steps in R. Step by step lessons as showed in class.
 
 * Jan 24th, 2014:
- * [R](./R) - Temporal series samples (sample_6).
+ * [R](./R) - Temporal series and main component analysis samples (sample_6).
 
 Deliverables:
 -------------
