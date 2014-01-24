@@ -5,6 +5,6 @@ Collection of samples performed during the class about Main Components Analisis 
 
 Files: 
 
- * [step_by_step.R](step_by_step.R) - Cars sample.
+ * [step_by_step.R](step_by_step.R) - Step by step R
  * [src](./src) - Original Rocio code.
  
