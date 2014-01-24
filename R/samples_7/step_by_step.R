@@ -108,12 +108,17 @@ sum((irispca_stand$sdev)^2) # es 4, igual quel número de variables normalizadas
 plot(irispca_stand,
      main = "Varianza de cada componente")
 
-# Gráfico útil para ver el codo
+# Gráfico útil para ver el codo. El codo suele indicar con cuántos componentes nos quedamos. En
+# este caso, estaríamos entre 2 ó 3.
 screeplot(irispca_stand,
           main = "Varianza de cada componente",
           type="lines",
           col=3)
 
 # Proporción de varianza del total y proporción acumulada
+# Al llegar al componente 2, ya habríamos cubierto un 95%
+# Esto nos haría probablemente decidir que nos quedamos con
+# dos componentes nada más, que pasarán a nuestra siguiente
+# fase de modelado.
 summary(irispca_stand)
 
