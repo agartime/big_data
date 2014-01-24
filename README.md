@@ -33,6 +33,9 @@ Lessons by day:
 * Jan 17th-18th, 2014:
  * [R](./R) - First steps in R. Step by step lessons as showed in class.
 
+* Jan 24th, 2014:
+ * [R](./R) - Temporal series samples (sample_6).
+
 Deliverables:
 -------------
 
