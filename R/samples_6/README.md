@@ -5,5 +5,5 @@ Collection of samples performed during the class. Most of the steps in step_by_s
 
 Files: 
 
- * [step_by_step.R](step_by_step_car_sample.R) - Cars sample.
+ * [step_by_step.R](step_by_step.R) - Temporal Series samples.
  
