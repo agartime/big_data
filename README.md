@@ -36,6 +36,9 @@ Lessons by day:
 * Jan 24th, 2014:
  * [R](./R) - Temporal series and principal component analysis samples (sample_6).
 
+* Jan 25th, 2014:
+ * [R](./R) - Clustering, Kmeans, PAM, Decision Trees
+
 Deliverables:
 -------------
 

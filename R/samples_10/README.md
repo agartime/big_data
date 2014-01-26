@@ -1,5 +1,5 @@
-R - Samples 8 - Trees
----------------------
+R - Samples 10 - Decision Tree Samples
+-------------------------------------
 
 Collection of samples performed during the class about trees using R iris model.
 
