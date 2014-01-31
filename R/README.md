@@ -13,4 +13,4 @@ R (http://www.r-project.org) lessons.
 * [samples_8](./samples_8) - Clustering samples (24th Jan 2014).
 * [samples_9](./samples_9) - Kmeans And PAM (24th Jan 2014).
 * [samples_10](./samples_10) - Decision Tree samples (24th Jan 2014).
-
+* [samples_11](./samples_11) - Neuronal network sample (31st Jan 2014).
