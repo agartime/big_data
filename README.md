@@ -40,7 +40,7 @@ Lessons by day:
  * [R](./R) - Clustering, Kmeans, PAM, Decision Trees
 
 * Jan 31st, 2014:
- * [R](./R) - Neuronal Network Sample in R.
+ * [R](./R) - Neuronal Networks and Association Rules Samples in R.
 
 Deliverables:
 -------------
