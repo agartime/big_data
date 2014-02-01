@@ -1,0 +1,12 @@
+Esto es una prueba
+muy rapida
+para ver como
+implementar el wordcount utilizando 
+hadoop streaming
+prueba
+ver
+rapida
+implementar
+wordcount
+wordcount
+

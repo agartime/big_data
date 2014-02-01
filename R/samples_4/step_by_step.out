@@ -1,0 +1,64 @@
+
+> help(dnorm)
+> plot(seq(-4,4,0.1)
++ )
+> myx <- seq(-4,4,0.1)
+> myx
+ [1] -4.0 -3.9 -3.8 -3.7 -3.6 -3.5 -3.4 -3.3 -3.2 -3.1 -3.0 -2.9 -2.8 -2.7 -2.6
+[16] -2.5 -2.4 -2.3 -2.2 -2.1 -2.0 -1.9 -1.8 -1.7 -1.6 -1.5 -1.4 -1.3 -1.2 -1.1
+[31] -1.0 -0.9 -0.8 -0.7 -0.6 -0.5 -0.4 -0.3 -0.2 -0.1  0.0  0.1  0.2  0.3  0.4
+[46]  0.5  0.6  0.7  0.8  0.9  1.0  1.1  1.2  1.3  1.4  1.5  1.6  1.7  1.8  1.9
+[61]  2.0  2.1  2.2  2.3  2.4  2.5  2.6  2.7  2.8  2.9  3.0  3.1  3.2  3.3  3.4
+[76]  3.5  3.6  3.7  3.8  3.9  4.0
+> plot(x=myx, y=dnorm(myx,mean=3))
+> plot(x=myx, y=dnorm(myx,mean=0), type="l")
+> # Esa es la densidad
+> #
+> # Ahora la probabilidad acumulada. Ver porcentaje de datos menores que 1.
+> pnorm(1)
+[1] 0.8413447
+> # El 84% de los datos son menores que 1
+> pnorm(1, mean=1)
+[1] 0.5
+> #qnorm entrar por eje y y ver cual es el eje X
+> qnorm(1, mean=1)
+[1] Inf
+> qnorm(seq(0,1,0.1)
++ )
+ [1]       -Inf -1.2815516 -0.8416212 -0.5244005 -0.2533471  0.0000000
+ [7]  0.2533471  0.5244005  0.8416212  1.2815516        Inf
+> plot(x=myx, y=norm(myx,mean=0), type="l")
+Error en norm(myx, mean = 0) : unused argument (mean = 0)
+> plot(x=myx, y=pnorm(myx,mean=0), type="l")
+> #
+> # Media 10 y desviacion tipica 2. A sabemos que es mayor que el 90% de los miembros de la poblacion. Encontrar A.
+> qnorm(0.9, mean=10, sd=2) #Percentil 90
+[1] 12.5631
+> # Ahora queremos saber. Entre a y b (a=90%) se encuentra el 60% de la población. (numero por debajo de a que entre el 90 y ese valor esta el 60).
+> # 90 - 60 = 30 (valor por el cual por debajo de a esta el 30)
+> qnorm(0.3, mean=10, sd=2)
+[1] 8.951199
+> 
+> #
+> # C es menor que el 80% de la población. 
+> # Si es menor que el 80%, sera mayor que el 20%
+> qnorm(0.2, mean=10, sd=2)
+[1] 8.316758
+> 
+> #
+> # Media 6 y desviacion tipica 2. Si elegimos un individuo al azar, cual es la probabilidad de que se encuentre en el intervalo 6,7.
+> pnorm(6, mean=6, sd=2) # Esto nos diria la probabilidad de ser menor que 6.
+[1] 0.5
+> pnorm(7, mean=6, sd=2) # Y la de ser menor que 7
+[1] 0.6914625
+> # Luego:
+> pnorm(7, mean=6, sd=2) - pnorm(6, mean=6, sd=2)
+[1] 0.1914625
+> # Si fuese "probabilidad de ser mayor...", hariamos la inversa
+> 1 - pnorm(7, mean=6, sd=2) - pnorm(6, mean=6, sd=2)
+[1] -0.1914625
+> 1 - (pnorm(7, mean=6, sd=2) - pnorm(6, mean=6, sd=2))
+[1] 0.8085375
+> # eso si
+> q()
+

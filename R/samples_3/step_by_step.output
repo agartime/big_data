@@ -1,0 +1,556 @@
+
+> # load("ratas")
+> # table("ratas")
+> load("ratas")
+> table("ratas")
+
+ratas
+    1
+> table(ratas)
+, , tint = (0.17,0.3]
+
+      veneno
+t      1 2 3
+  0.18 0 0 1
+  0.21 0 0 1
+  0.22 0 0 2
+  0.23 0 1 2
+  0.24 0 0 1
+  0.25 0 0 1
+  0.29 0 1 1
+  0.3  0 0 2
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 0 0
+  1.1  0 0 0
+  1.24 0 0 0
+
+, , tint = (0.3,0.43]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 1 1 1
+  0.33 0 0 1
+  0.35 0 1 0
+  0.36 0 1 1
+  0.37 0 1 1
+  0.38 0 0 1
+  0.4  0 2 0
+  0.43 2 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 0 0
+  1.1  0 0 0
+  1.24 0 0 0
+
+, , tint = (0.43,0.56]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 1 0
+  0.45 3 0 0
+  0.46 1 0 0
+  0.49 0 1 0
+  0.56 0 1 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 0 0
+  1.1  0 0 0
+  1.24 0 0 0
+
+, , tint = (0.56,0.69]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 1 0
+  0.62 1 0 0
+  0.63 1 0 0
+  0.66 1 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 0 0
+  1.1  0 0 0
+  1.24 0 0 0
+
+, , tint = (0.69,0.82]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 1 1 0
+  0.72 1 0 0
+  0.76 1 0 0
+  0.82 1 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 0 0
+  1.1  0 0 0
+  1.24 0 0 0
+
+, , tint = (0.82,0.95]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 1 0 0
+  0.92 0 1 0
+  1.02 0 0 0
+  1.1  0 0 0
+  1.24 0 0 0
+
+, , tint = (0.95,1.08]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 1 0
+  1.1  0 0 0
+  1.24 0 0 0
+
+, , tint = (1.08,1.21]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 0 0
+  1.1  1 0 0
+  1.24 0 0 0
+
+, , tint = (1.21,1.34]
+
+      veneno
+t      1 2 3
+  0.18 0 0 0
+  0.21 0 0 0
+  0.22 0 0 0
+  0.23 0 0 0
+  0.24 0 0 0
+  0.25 0 0 0
+  0.29 0 0 0
+  0.3  0 0 0
+  0.31 0 0 0
+  0.33 0 0 0
+  0.35 0 0 0
+  0.36 0 0 0
+  0.37 0 0 0
+  0.38 0 0 0
+  0.4  0 0 0
+  0.43 0 0 0
+  0.44 0 0 0
+  0.45 0 0 0
+  0.46 0 0 0
+  0.49 0 0 0
+  0.56 0 0 0
+  0.61 0 0 0
+  0.62 0 0 0
+  0.63 0 0 0
+  0.66 0 0 0
+  0.71 0 0 0
+  0.72 0 0 0
+  0.76 0 0 0
+  0.82 0 0 0
+  0.88 0 0 0
+  0.92 0 0 0
+  1.02 0 0 0
+  1.1  0 0 0
+  1.24 0 1 0
+
+> # Cargamos el fichero de ratas
+> history()
+>
+> #
+> #
+> table(ratas$tint, ratas$veneno)  #El tiempo lo queremos hacer depender del veneno. La primera ratas$t seria la variable que se quiere explicar
+
+               1  2  3
+  (0.17,0.3]   0  2 11
+  (0.3,0.43]   3  6  5
+  (0.43,0.56]  4  3  0
+  (0.56,0.69]  3  1  0
+  (0.69,0.82]  4  1  0
+  (0.82,0.95]  1  1  0
+  (0.95,1.08]  0  1  0
+  (1.08,1.21]  1  0  0
+  (1.21,1.34]  0  1  0
+> #Seria la tabla de las frecuencias condicionadas. Tiempo en funcion del veneno.
+> # Pintamos el diagrama de cajas, utilizamos la virgulilla par aindicar "en función del". Tiempo en funcion del veneno.
+> boxplot(ratas$t ~ ratas$veneno)
+> boxplot(ratas$t ~ ratas$veneno)
+>
+>
+>
+>
+> # TASAS PAISES
+> #
+> #
+> #
+> load("tasas_paises"=
++ load("tasas_paises")
+>
+> load("tasas_paises")
+> #
+> #
+> #Sacamos la matriz de varianzas
+> var(tasas_paises)
+       pais    talfab     habmed     habcam
+pais     NA        NA         NA         NA
+talfab   NA  1377.200 -5450.4615 -198.90400
+habmed   NA -5450.462 34228.7885  630.93440
+habcam   NA  -198.904   630.9344   39.04643
+Warning message:
+In var(tasas_paises) : NAs introduced by coercion
+> var(tasas_paises)
+       pais    talfab     habmed     habcam
+pais     NA        NA         NA         NA
+talfab   NA  1377.200 -5450.4615 -198.90400
+habmed   NA -5450.462 34228.7885  630.93440
+habcam   NA  -198.904   630.9344   39.04643
+Warning message:
+In var(tasas_paises) : NAs introduced by coercion
+>
+> #Creamos una seleccion y nos quedamos con las columnas numericas.
+> miseltasas <- tasas_paises[, c("talfab", "habmed", "habcam")]
+> miseltasas
+  talfab habmed habcam
+1     93   5.60   1.85
+2     94   5.21   1.76
+3      8 426.32  12.00
+4     36  35.86  14.65
+5     60   7.84   2.57
+>
+> plot(miseltasas)
+> plot(miseltasas)
+> plot(miseltasas)
+> #
+> #
+> # Matriz de covarianzas
+> cov(miseltasas)
+          talfab     habmed     habcam
+talfab  1377.200 -5450.4615 -198.90400
+habmed -5450.462 34228.7885  630.93440
+habcam  -198.904   630.9344   39.04643
+> #
+> #
+> # Matriz de correlacion (entre -1 y 1)
+> cor(miseltasas)
+           talfab     habmed     habcam
+talfab  1.0000000 -0.7938510 -0.8577374
+habmed -0.7938510  1.0000000  0.5457551
+habcam -0.8577374  0.5457551  1.0000000
+> #
+> #
+> #
+> #
+> ####### PESO/ESTATURA ###########
+> load("peso_estatura")
+> ls()
+[1] "miseltasas"    "peso_estatura" "ratas"         "tasas_paises"
+> peso_estatura
+  peso estatura
+1 58.5     1.72
+2 69.0     1.83
+3 68.5     1.76
+4 57.0     1.63
+5 62.0     1.79
+>
+> `plot(peso_estatura)
++
+> plot(peso_estatura)
+> #
+> #
+> # Correlación
+> cor(peso_estatura)
+              peso  estatura
+peso     1.0000000 0.7954924
+estatura 0.7954924 1.0000000
+>
+> # A la correlacion le podemos pasar directamente las variables)
+> cor(peso_estatura$peso, peso_estatura$estatura)
+[1] 0.7954924
+> #
+> #
+> # La mejor recta que ajusta unos puntos. Recta de regresion.
+> a <- cov(peso_estatura$peso, peso_estatura$estatura) / var(peso_estatura$peso)
+> a
+[1] 0.01093117
+> #
+> # Su contrario, estatura en funcion del peso
+> a <- cov(peso_estatura$estatura, peso_estatura$peso) / var(peso_estatura$estatura)
+> a
+[1] 57.89022
+> #
+> #
+> #En el eje X se suele poner la variable "predictora"
+> # a seria la pentiente
+> #
+> #Tambien teniamos b.
+> b <- mean(peso_estatura$peso) - a * mean(peso_estatura$estatura)
+> b
+[1] -38.07633
+> #
+> # b suele ser la ordenada en el origin y a la pendiente, pero R lo interpreta al reves, de ahi el a=b y b=a
+> plot(x=peso_estatura$estatura, y=peso_estatura$peso)
+> abline(a=b, b=a, col="green")
+> abline(a=b, b=a, col="green")
+> abline(a=b, b=a, col="green", lwd=2)
+>
+> #
+> # Todo es to normalmente no se hace, para eso estan los modelos predictivos de R
+> #Creamos un modelo lineal y le indicamos que lo queremos predecir en funcion de peso_estatura$estatura.
+>
+> modl <- lm(peso_estatura$peso ~ peso_estatura$estatura)
+> modl
+
+Call:
+lm(formula = peso_estatura$peso ~ peso_estatura$estatura)
+
+Coefficients:
+           (Intercept)  peso_estatura$estatura
+                -38.08                   57.89
+
+> # Ahi ya me dice que la estatura la tengo que multiplicar por 57.89 y que la ordenada en el origen seria -38.
+> # Esto nos lo detalla con summary
+> summary(mod1)
+Error in summary(mod1) : object 'mod1' not found
+> summary(modl)
+
+Call:
+lm(formula = peso_estatura$peso ~ peso_estatura$estatura)
+
+Residuals:
+      1       2       3       4       5
+-2.9949  1.1372  4.6895  0.7153 -3.5472
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)
+(Intercept)              -38.08      44.49  -0.856    0.455
+peso_estatura$estatura    57.89      25.46   2.274    0.108
+
+Residual standard error: 3.888 on 3 degrees of freedom
+Multiple R-squared:  0.6328,    Adjusted R-squared:  0.5104
+F-statistic:  5.17 on 1 and 3 DF,  p-value: 0.1075
+
+> #Los residuals indican los residuos/errores de cada punto
+> # intercept seria la ordenada en el origen
+> # peso_estatura$estatura, por lo que hay que multiplicar para obtener el peso
+> #Puesto que los valores de Pr(>|t|) son bajos, indican que no está tan mal
+> # EL multiple R-squared viene a decir que el 63% de la variabilidad de los datos queda explicada por el modelo.
+> # Queda por tanto un 37% que el modelo no es capaz de explicar.
+> # Cuanto mas bajo sea el p-value el ajuste seria mejor.
+> # Seria la bondad del ajuste.
+> # Si hacemos el plot:
+> plot(y=peso_estatura$peso, x=peso_estatura$estatura)
+> # el abline tambien puede recibir un modelo, y lo pintaria.
+> abline(modl)
+> # Al plot tambien le puedes pasar un modelo e ira mostrando distintas cosas.
+> # 1. Los residuos frente a los valores ajustados. Si viesemos los residuos en forma de trompeta, podria indicar que en realidad el modelo no sigue un patron lineal.
+> # 2. Vemos un trazado de los cuartiles de los residuos estandarizados (variable - media / varianza). Indica si los residuos tienen una pinta gaussiana (seria bueno) o no.
+> # 3. Raiz cuadrada de los residuos frente a los valores ajustados... no muy interesante.
+> # 4. Distancia de q con dos umbrales y dentro los residuos estandarizados. Viene a representar la influencia de los residuos en el modelo ajustado. Asi como vimos que la media era muy
+> #    sensible a puntos atipicos; esto indica a ver si hay algun valor que influye mas que los otros en el ajuste del modelo. Si existe y ademas es atipico, es candidato a ser error y
+> #    convendria quitarselo de en medio.
+>
+> plot(modl)

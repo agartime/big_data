@@ -1,7 +1,7 @@
-U-Tad Big Data Master's Degree Lessons Learned
+U-Tad Big Data Master's Degree Lessons Learnt
 ==============================================
 
-This is a set of practice lessons learned during the first U-Tad Master's Degree in Big Data (Oct 2013 - May 2014).
+This is a set of practice lessons learnt during the first U-Tad Master's Degree in Big Data (Oct 2013 - May 2014).
 
 Lessons by day:
 ---------------
@@ -19,11 +19,41 @@ Lessons by day:
 * Nov 29th, 2013:
  * [patterns](./mapreduce/005_patterns/) - Including Inverted Index, Secondary Sort, etc.
 
+* Dec 14th, 2013:
+ * [hive](./hive) - Hive Samples. Regex Serde table creation, CTAS, etc.
+ * [twitter](./hive/twitter) - Flume + Twitter + Hive. Analyzing tweets.
+
+* Dec 20th, 2013:
+ * [pig](./pig) - Pig Samples.
+
+* Jan 11th, 2014:
+ * [webhdfs](./webhdfs) - Hadoop WebHDFS REST API samples.
+ * [hadoop_streaming](./hadoop_streaming) - Hadoop Streaming Samples using Awk and Ruby.
+
+* Jan 17th-18th, 2014:
+ * [R](./R) - First steps in R. Step by step lessons as showed in class.
+
+* Jan 24th, 2014:
+ * [R](./R) - Temporal series and principal component analysis samples (sample_6).
+
+* Jan 25th, 2014:
+ * [R](./R) - Clustering, Kmeans, PAM, Decision Trees
+
+* Jan 31st, 2014:
+ * [R](./R) - Neuronal Networks and Association Rules Samples in R.
+
+* Feb 1st, 2014:
+ * [R](./R) - Data Tables, Lists, and R + Hadoop samples.
+
 Deliverables:
 -------------
 
 * HDFS Interaction
   * [Compactador](./deliverables/compactador)
+* Map Reduce Exercises - Histogram and FriendsOfMyFriends
+  * [MapReduce](./deliverables/mapreduce)
+* Design Patterns Exercises - Syslog Analyzer, Salaries Range using In Mapper Combining and Map Only.
+  * [DesignPatterns](./deliverables/designpatterns)
 
 Contact
 ------- 
