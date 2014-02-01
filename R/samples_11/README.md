@@ -1,4 +1,4 @@
-R - Samples 10 - Neuronal Networks
+R - Samples 11 - Neuronal Networks
 ----------------------------------
 
 Collection of samples performed during the class about neuronal networks in R.

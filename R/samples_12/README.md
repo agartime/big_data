@@ -1,4 +1,4 @@
-R - Samples 10 - Association Rules
+R - Samples 122 - Association Rules
 ----------------------------------
 
 Collection of samples performed during the class about association rules in R.
