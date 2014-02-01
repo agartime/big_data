@@ -42,6 +42,9 @@ Lessons by day:
 * Jan 31st, 2014:
  * [R](./R) - Neuronal Networks and Association Rules Samples in R.
 
+* Feb 1st, 2014:
+ * [R](./R) - Data Tables, Lists, and R + Hadoop samples.
+
 Deliverables:
 -------------
 
