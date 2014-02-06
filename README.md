@@ -54,6 +54,8 @@ Deliverables:
   * [MapReduce](./deliverables/mapreduce)
 * Design Patterns Exercises - Syslog Analyzer, Salaries Range using In Mapper Combining and Map Only.
   * [DesignPatterns](./deliverables/designpatterns)
+* Pig Exercises 
+  * [Pig Exercises](./deliverables/pig)
 
 Contact
 ------- 
