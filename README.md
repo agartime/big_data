@@ -45,6 +45,9 @@ Lessons by day:
 * Feb 1st, 2014:
  * [R](./R) - Data Tables, Lists, and R + Hadoop samples.
 
+* Feb 22nd, 2014:
+ * [HBase API](./hbase) - HBase Api. Pair programming session with Fran.
+
 Deliverables:
 -------------
 
