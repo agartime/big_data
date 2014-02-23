@@ -11,4 +11,5 @@ This is a set of delivered exercises for its evaluation.
   * [DesignPatterns](./designpatterns)
 * Pig Exercises 
   * [Pig Exercises](./pig)
-
+* R
+  * [R delivered exercises](./R)
