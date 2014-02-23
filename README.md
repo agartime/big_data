@@ -59,6 +59,8 @@ Deliverables:
   * [DesignPatterns](./deliverables/designpatterns)
 * Pig Exercises 
   * [Pig Exercises](./deliverables/pig)
+* R
+  * [R](./deliverables/R)
 
 Contact
 ------- 
