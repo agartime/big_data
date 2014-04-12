@@ -48,6 +48,9 @@ Lessons by day:
 * Feb 22nd, 2014:
  * [HBase API](./hbase) - HBase Api. Pair programming session with Fran.
 
+* Apr 12th, 2014:
+ * [Storm](./storm) - Storm Hello World Sample
+
 Deliverables:
 -------------
 
