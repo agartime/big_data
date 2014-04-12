@@ -49,7 +49,7 @@ Lessons by day:
  * [HBase API](./hbase) - HBase Api. Pair programming session with Fran.
 
 * Apr 12th, 2014:
- * [Storm](./storm) - Storm Hello World Sample
+ * [Storm](./storm) - Storm Hello World and ClickStats Sample
 
 Deliverables:
 -------------
