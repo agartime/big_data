@@ -1,0 +1,2 @@
+CREATE INDEX ON :Person(name)
+CREATE INDEX ON :Movie(title)
