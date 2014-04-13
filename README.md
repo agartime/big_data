@@ -61,6 +61,8 @@ Deliverables:
   * [Pig Exercises](./deliverables/pig)
 * R
   * [R](./deliverables/R)
+* Neo4j
+  * [Neo4j](./deliverables/neo4j)
 
 Contact
 ------- 

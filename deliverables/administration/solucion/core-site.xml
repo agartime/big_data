@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>fs.default.name</name>
+    <!-- CAMBIO se modifica el hostname del namenode por contener caracter incorrecto ":" -->
+	  <value>hdfs://srvmaster:8020</value>
+  </property>
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <!-- CAMBIO concatenamos el nombre del usuario en los temporales para discernir-->
+	<value>/tmp/hadoop-${user.name}</value>
+  </property>
+  <property>
+    <name>io.file.buffer.size</name>
+    <!-- CAMBIO Se aumenta el tamaño del buffer a 64KB para mejorar la tasa de transferencia. Se ajusta a 64KB
+    suponiendo que el tamaño de de pagina en Linux es de 4KB (multiplo).--> 
+    <value>65536</value>
+  </property>
+  <property>
+    <name>fs.trash.interval</name>
+    <!-- CAMBIO Se ajusta como maximo a un dia la posibilidad del expunge de la papelera--> 
+    <value>1440</value>
+  </property>
+  <property>
+    <name>fs.trash.checkpoint.interval</name>
+     <!-- CAMBIO Se ajusta el checkpoint de la papelera a 720, dos veces al dia (acorde al parametro anterior)--> 
+    <value>720</value>
+  </property>
+  <property>
+    <!-- CAMBIO Modificado nombre de la propiedad (sobraba el "net." inicial) -->
+    <name>topology.script.file.name</name>
+    <!-- CAMBIO Se supone localizado el script dns_to_switch.sh en el directorio core, y el fichero con la topologia
+    en /etc/hadoop/conf -->
+    <value>core/dns_to_switch.sh</value>
+  </property>
+  <property>
+    <name>dfs.namenode.handler.count</name>
+    <!-- CAMBIO Se sigue la guideline del logartimo natural de los nodos del cluster * 20 -->
+    <value>35</value>
+  </property>
+</configuration>
+
