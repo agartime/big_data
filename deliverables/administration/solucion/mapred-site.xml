@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- in this file, we used the new Hadoop property names in @BIDOOP_CONF@ sustitutions.
+Nonetheless, we still use the old 0.20 MR version so we need the "deprecated" property names.
+Please use the following webpage to do the conversion:
+http://hadoop.apache.org/common/docs/r0.23.0/hadoop-project-dist/hadoop-common/DeprecatedProperties.html
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>mapred.job.tracker</name>
+    <value>srvmaster:8021</value>
+  </property>
+  <property>
+    <name>mapred.child.java.opts</name>
+    <!-- CAMBIO Reservamos 2G de heap por tarea. Puesto que podremos tener hasta 12 tareas y cada una se llevaria 2g, ocupariamos como mucho 24g de nuestros 32 disponibles. El resto para el SO. Este parametro aparece en el libro de Hadoop Operations como "mapred.java.child.opts" en lugar de "mapred.child.java.opts" como dicta "Hadoop: The Definitive Guide" -->
+    <value>-Xmx2g</value>
+  </property>
+  <property>
+    <name>mapred.local.dir</name>
+    <!-- CAMBIO Supuestamente separado /data/1 para el disco 1, /data/2 para el 2, etc; splitteamos los datos intermedios entre los discos locales para ganar throughput-->
+    <value>/data/1/mapred/local,/data/2/mapred/local,/data/3/mapred/local,/data/4/mapred/local</value>
+  </property>
+  <property>
+    <name>mapreduce.jobtracker.staging.root.dir</name>
+    <!-- CAMBIO se modifica el staging al propio home de los usuarios-->
+	  <value>/user</value>
+  </property>
+  <property>
+    <name>mapred.map.tasks</name>
+    <value>2</value>
+  </property>
+  <property>
+    <name>mapred.tasktracker.map.tasks.maximum</name>
+    <!-- CAMBIO Se modifica a 8 tareas de map. Queremos como mucho 12 en el sistema, asi que 8 para mappers y 4 para reducers considero que puede estar bien.-->
+    <value>8</value>
+  </property>
+  <property>
+    <name>mapred.tasktracker.reduce.tasks.maximum</name>
+    <!-- CAMBIO Se modifica a 4 tareas de reduce. Queremos como mucho 12 en el sistema, asi que 8 para mappers y 4 para reducers considero que puede estar bien.-->
+    <value>4</value>
+  </property>
+  <property>
+    <name>mapred.job.tracker.retiredjobs.cache.size</name>
+    <value>1000</value>
+  </property>
+  <property>
+    <name>mapred.job.tracker.handler.count</name>
+    <value>1</value>
+  </property>
+  <property>
+    <name>mapred.reduce.parallel.copies</name>
+    <!-- CAMBIO Modificado por la formula que aparece en Hadoop Operations (log natural (tam_cluster) * 4)-->
+    <value>7</value>
+  </property>
+  <property>
+    <name>io.sort.factor</name>
+    <!-- CAMBIO Modificado al tamaño recomendado en Hadoop Operations puesto que tenemos mas de 1GB de heap por tarea--> 
+    <value>64</value>
+  </property>
+  <property>
+    <name>tasktracker.http.threads</name>
+    <!-- CAMBIO Lo ajustamos a 32. Pienso que como mucho podrian ser (4 reducers * 6 nodes * 7 reducer parallel copies = 140; pero solo tenemos 5 usuarios. Digamos que cada uno puede abrir hasta tres pestañas del explorador... y, por ajustar a multiplo de byte, lo dejamos en 32.-->
+    <value>32</value>
+  </property>
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <!-- CAMBIO Para una red de 1Gb, podemos confiar en empezar a lanzar reducers
+    cuando se hayan lanzado el 80% de los jobs. Posteriormente, se podra reducir si
+    vemos que este valor no es adecuado.-->
+    <value>0.08</value>
+  </property>
+  <property>
+    <name>mapred.jobtracker.taskScheduler</name>
+    <!-- CAMBIO Utilizaremos fairScheduler y asignaremos prioridades para que Jose pueda lanzar sus jobs con prioridad-->
+    <value>org.apache.hadoop.mapred.FairScheduler</value>
+  </property>
+  <property>
+    <name>mapred.fairscheduler.allocation.file</name>
+    <!-- CAMBIO - Puesto que vamos a configurar el fairscheduler, adjuntamos fichero de configuracion-->
+    <value>/etc/hadoop/conf/allocations.xml</value>
+  </property>
+  <property>
+    <name>mapred.reduce.tasks.speculative.execution</name>
+    <!-- CAMBIO Desactivamos la ejecucion especulativa en los reducers, asi evitamos duplicar reducers
+    y nos ahorramos el trafico de red resultante de esto. Dejamos a los desarrolladores activarlo
+    manualmente en tareas concretas.-->
+    <value>false</value>
+  </property>
+  <property>
+    <name>mapred.compress.map.output</name>
+    <!-- CAMBIO Activamos la compresion en el output de los mappers-->
+    <value>true</value>
+  </property>
+  <property>
+    <name>mapred.map.output.compression.codec</name>
+    <!-- CAMBIO Se asigna el codec SnappyCodec puesto que en general ofrece un buen ratio de compresion
+    en relacion al consumo de CPU utilizado. Snappy no es splittable, pero esto no resulta importante en
+    la salida de los mappers. -->
+    <value>org.apache.io.compress.SnappyCodec</value>
+  </property>
+  <property>
+    <name>mapred.output.compression.type</name>
+    <value>RECORD</value>
+  </property>
+  <property>
+    <name>io.sort.mb</name>
+    <!-- CAMBIO Lo asignamos al valor asignado por Hadoop Operations puesto que tenemos mas de 1GB de heap -->
+    <value>128</value>
+  </property>
+  <property>
+    <name>mapred.hosts</name>
+    <value>/etc/hadoop/conf/includedSlaves</value>
+  </property>
+  <property>
+    <name>mapred.hosts.exclude</name>
+    <value>/etc/hadoop/conf/excludedSlaves</value>
+  </property>
+  <property>
+    <name>mapred.jobtracker.restart.recover</name>
+    <!-- CAMBIO Hadoop Operations propone desactivarlo porque a menudo no es capaz de recuperar al jobtracker y simplemente hace que este tarde mas en arrancar.-->
+    <value>false</value>
+  </property>
+  <property>
+    <name>mapred.submit.replication</name>
+    <!-- CAMBIO No tienen sentido 10 copias si solo tenemos 6 nodos, lo reducimos a 6-->
+    <value>6</value>
+  </property>
+</configuration>
+

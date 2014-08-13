@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<allocations>
+	<defaultMinSharePreemptionTimeout>300</defaultMinSharePreemptionTimeout>
+	<maxRunningJobs>70</maxRunningJobs> <!-- 12 jobs por esclavo -->
+
+	<pool name="jose">
+		<!-- Jose tiene su propio pool, como no lanza muchos jobs, le ponemos un limite -->
+		<minMaps>8</minMaps>
+		<minReduces>4</minReduces>
+		<maxMaps>8</maxMaps>
+		<maxReduces>4</maxReduces>
+	</pool>	
+</allocations>

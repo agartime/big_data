@@ -1,0 +1,2 @@
+MATCH a-->b SET a :Person, b :Movie
+

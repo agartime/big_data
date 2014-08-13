@@ -1,0 +1,3 @@
+MATCH (travolta {name:'John Travolta'}),
+ p = (travolta)-[:ACTS_IN|DIRECTED]->(m)
+RETURN m.genre, count(m) AS numberOfFilms

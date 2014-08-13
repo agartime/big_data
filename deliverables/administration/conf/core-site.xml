@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>fs.default.name</name>
+	<value>hdfs://:srvmaster:8020</value>
+  </property>
+  <property>
+    <name>hadoop.tmp.dir</name>
+	<value>/tmp/hadoop</value>
+  </property>
+  <property>
+    <name>io.file.buffer.size</name>
+    <value>4096</value>
+  </property>
+  <property>
+    <name>fs.trash.interval</name>
+    <value>0</value>
+  </property>
+  <property>
+    <name>fs.trash.checkpoint.interval</name>
+    <value>0</value>
+  </property>
+  <property>
+    <name>net.topology.script.file.name</name>
+    <value></value>
+  </property>
+  <property>
+    <name>dfs.namenode.handler.count</name>
+    <value>10</value>
+  </property>
+</configuration>
+

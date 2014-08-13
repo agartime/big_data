@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+  <property>
+    <name>dfs.permissions.enabled</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>dfs.name.dir</name>
+    <!-- CAMBIO . Puesto que los discos estan en RAID 1, no duplicaremos la informacion del namenode en local, aunque si en un volumen que suponemos configurado por NFS bajo /mnt y que se alojaria en otro rack.-->
+    <value>/data/dfs/nn,/mnt/dfs/nn</value>
+  </property>
+  <property>
+    <name>fs.checkpoint.dir</name>
+    <value>/data/dfs/namesecondary</value>
+  </property>
+  <property>
+    <name>dfs.data.dir</name>
+    <!-- CAMBIO Supuestos /data/1, /data/2, etc. filesystems sobre dispositivos fisicos separados, separamos los datos
+    de HDFS para que se haga un Round Robin con ellos en las escrituras, mejorando asi la performance-->
+    <value>/data/1/dfs/dn,/data/2/dfs/dn,/data/3/dfs/dn,/data/4/dfs/dn</value>
+  </property>
+  <property>
+    <name>dfs.safemode.extension</name>
+    <!-- CAMBIO Puesto que nuestro cluster es pequeño, no necesitamos extender el modo seguro, asi que haremos que 
+    se desactive automaticamente cuando se cumpla la condicion minima de replicacion-->
+    <value>0</value>
+  </property>
+  <property>
+    <!-- CAMBIO Correccion del nombre del parametro-->
+    <name>dfs.safemode.threshold.pct</name>
+    <value>0.999f</value>
+  </property>
+  <property>
+    <name>dfs.hosts</name>
+    <value>/etc/hadoop/conf/includedSlaves</value>
+  </property>
+  <property>
+    <name>dfs.hosts.exclude</name>
+    <value>/etc/hadoop/conf/excludedSlaves</value>
+  </property>
+  <property>
+    <name>dfs.datanode.du.reserved</name>
+    <!-- CAMBIO Se incrementa el espacio reservado al FS en cada datanode. En las transparencias se recomienda un 25% pero puesto que el disco es de 2TB y desperdiciar 500GB me parece mucho, reservo 400GB (probablemente mas que suficiente) -->
+    <value>439804651000</value>
+  </property>
+  <property>
+    <!-- CAMBIO Se mantiene el tamaño de 128M pero se modifica el nombre del parametro porque le falta un punto (".")-->
+    <name>dfs.block.size</name>
+    <value>134217728</value>
+  </property>
+  <property>
+    <name>dfs.datanode.failed.volumes.tolerated</name>
+    <!-- CAMBIO Aumentamos el numero de discos que pueden fallar a 1 puesto que tenemos 4 y considero que un fallo de disco no deberia tirar todo el nodo.-->
+    <value>1</value>
+  </property>
+  <property>
+    <!-- CAMBIO se corrige el nombre de la propiedad (dfs.checkpoint no, dfs.namenode.checkpoint)-->
+    <name>dfs.namenode.checkpoint.period</name>
+    <value>3600</value>
+  </property>
+  <property>
+    <name>dfs.web.ugi</name>
+    <value>hdfs,hdfs</value>
+  </property>
+</configuration>
+

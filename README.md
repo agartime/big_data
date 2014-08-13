@@ -45,6 +45,18 @@ Lessons by day:
 * Feb 1st, 2014:
  * [R](./R) - Data Tables, Lists, and R + Hadoop samples.
 
+* Feb 22nd, 2014:
+ * [HBase API](./hbase) - HBase Api. Pair programming session with Fran.
+
+* Mar 7th, 2014:
+ * [Cassandra](./cassandra) - Util class.
+
+* Mar 22nd, 2014:
+ * [Neo4j](./neo4j) - Example 01.
+
+* Apr 12th, 2014:
+ * [Storm](./storm) - Storm Hello World and ClickStats Sample
+
 Deliverables:
 -------------
 
@@ -52,8 +64,16 @@ Deliverables:
   * [Compactador](./deliverables/compactador)
 * Map Reduce Exercises - Histogram and FriendsOfMyFriends
   * [MapReduce](./deliverables/mapreduce)
+* Administration
+  * [Administration](./deliverables/administration)
 * Design Patterns Exercises - Syslog Analyzer, Salaries Range using In Mapper Combining and Map Only.
   * [DesignPatterns](./deliverables/designpatterns)
+* Pig Exercises 
+  * [Pig Exercises](./deliverables/pig)
+* R
+  * [R](./deliverables/R)
+* Neo4j
+  * [Neo4j](./deliverables/neo4j)
 
 Contact
 ------- 
