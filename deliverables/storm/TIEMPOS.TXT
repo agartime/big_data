@@ -1,0 +1,127 @@
+beatles.txt
+-----------------------------------
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 2
+    - CounterBolts : 2
+CONTADOR APROXIMADO: NO
+TIEMPO: 3066 ms
+
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 2
+    - CounterBolts : 4
+CONTADOR APROXIMADO: NO
+TIEMPO: 2709 ms
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 4
+CONTADOR APROXIMADO: NO
+TIEMPO: 2756ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 8
+CONTADOR APROXIMADO: NO
+TIEMPO: 2582ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 8
+CONTADOR APROXIMADO: FLAJOLET MARTIN (REDIS)
+TIEMPO: 15529ms.
+
+
+metamorphosis.txt
+-----------------
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 2
+    - CounterBolts : 2
+CONTADOR APROXIMADO: NO
+TIEMPO: 8545 ms.
+
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 2
+    - CounterBolts : 4
+CONTADOR APROXIMADO: NO
+TIEMPO: 7348 ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 4
+CONTADOR APROXIMADO: NO
+TIEMPO: 8790 ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 8
+CONTADOR APROXIMADO: NO
+TIEMPO: 7877 ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 8
+CONTADOR APROXIMADO: FLAJOLET MARTIN (REDIS)
+TIEMPO: 68815 ms.
+
+
+
+
+rlquijote.txt
+-----------------
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 2
+    - CounterBolts : 2
+CONTADOR APROXIMADO: NO
+TIEMPO: 12273 ms.
+
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 2
+    - CounterBolts : 4
+CONTADOR APROXIMADO: NO
+TIEMPO: 10808 ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 4
+CONTADOR APROXIMADO: NO
+TIEMPO: 18373ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 8
+CONTADOR APROXIMADO: NO
+TIEMPO: 18313 ms.
+
+TOPOLOGIA: CounterTopology (Redis)
+    - ReaderSpout : 1
+    - SplitBolts : 4
+    - CounterBolts : 8
+CONTADOR APROXIMADO: FLAJOLET MARTIN (REDIS)
+TIEMPO: N/A (Se omite).
+
+
+
+NOTAS: El almacenamiento en Redis de la estructura necesaria para el algoritmo de Flajolet Martin no es óptima. Se guarda
+una llave por cada valor del array; habría sido más óptimo realizarlo con una única llave. En primer lugar se guardaba
+dicho array en memoria, pero cada Bolt tendría su propio array con lo cual el resultado del algoritmo sería por bolt, y
+no total. El hecho de calcular e imprimir el resultado aproximado de Flajolet Martin en cada iteración también resulta
+especialmente doloroso en el rendimiento.
